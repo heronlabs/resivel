@@ -107,3 +107,7 @@ bin/
 
 # IDE
 .vscode
+
+# Temp
+temp/*
+!temp/.gitkeep
