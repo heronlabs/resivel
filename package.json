@@ -11,7 +11,10 @@
     "lint:fix": "gts fix",
     "test": "jest --runInBand --colors",
     "test:unit": "yarn test --config=tests/unit/jest.config.ts",
-    "test:integration": "yarn test --config=tests/integration/jest.config.ts"
+    "test:integration": "yarn test --config=tests/integration/jest.config.ts",
+    "api:start": "node bin/application/entry-point.js",
+    "docker:build": "docker build -t resume:api .",
+    "docker:up:resume-api": "docker-compose up -d resume-api"
   },
   "devDependencies": {
     "@faker-js/faker": "6.1.2",
@@ -32,9 +35,13 @@
   "dependencies": {
     "@nestjs/common": "^8.4.6",
     "@nestjs/core": "^8.4.6",
+    "@nestjs/platform-express": "^8.0.9",
     "@types/lodash": "^4.14.168",
+    "class-transformer": "0.4.0",
+    "class-validator": "^0.13.1",
     "lodash": "^4.17.21",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^7"
   },
   "prettier": "gts/.prettierrc.json",
   "eslintConfig": {

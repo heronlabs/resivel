@@ -23,7 +23,7 @@ describe('Given controller for Resume', () => {
 
   describe('Given pt-br route', () => {
     it('Should get Lucas Lacerda resume', () => {
-      const response = controller.ptBr();
+      const response = controller.createResumePtBr();
 
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });

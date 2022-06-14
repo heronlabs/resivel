@@ -4,6 +4,7 @@ import {
   HttpCode,
   HttpStatus,
   Inject,
+  Response,
   StreamableFile,
 } from '@nestjs/common';
 
@@ -24,11 +25,16 @@ export class ResumeController extends BaseController {
 
   @Get('/pt-br')
   @HttpCode(HttpStatus.OK)
-  public ptBr(): StreamableFile {
+  public createResumePtBr(@Response({passthrough: true}) res): StreamableFile {
     const resume = ResumeEntity.make(this.resumePtBr);
 
-    const latexResume = this.resumeLatexService.createResumeLatex(resume);
+    const pdfFile = this.resumeLatexService.createResumeLatex(resume);
 
-    return new StreamableFile(latexResume);
+    res.set({
+      'Content-Type': 'application/pdf',
+      'Content-Disposition': 'attachment; filename="resume-pt-br.pdf"',
+    });
+
+    return new StreamableFile(pdfFile);
   }
 }

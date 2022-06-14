@@ -17,7 +17,7 @@ describe('Given controller for Resume', () => {
       const file = new Mock<Buffer>().object();
       LatexCraftMock.createResumeLatex.mockReturnValueOnce(file);
 
-      const response = controller.ptBr();
+      const response = controller.createResumePtBr();
 
       expect(response).toEqual(new StreamableFile(file));
     });
