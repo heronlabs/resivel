@@ -1,10 +1,15 @@
-# Folders
+# Bin
 node_modules/
-coverage/
 bin/
+
+# Tests
+coverage/
 tests/
-temp/
 
-# Files
+# Temp
+temp/*
+!temp/.gitkeep
+
+# Etc
 *.yml
-
+*.md

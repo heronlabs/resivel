@@ -15,6 +15,7 @@ interface Server {
 export const server = async (): Promise<Server> => {
   const app = await NestFactory.create(ApiBootstrap);
 
+  // TODO: Criar configs.
   return {app, port: 3000};
 };
 

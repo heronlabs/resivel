@@ -1,5 +1,6 @@
 import {ResumeEntity} from '../../entities/resume/resume-entity';
 
+// TODO: Teminar de mapear resume.
 export class ResumeLatexTemplate {
   static make(resume: ResumeEntity): string {
     return `%-----------------------------------------------------------------------------------------------------------------------------------------------%

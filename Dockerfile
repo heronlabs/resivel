@@ -1,10 +1,19 @@
-FROM node:14.18.2-alpine3.12
+FROM node:14
+
+USER root
 
 WORKDIR /app
 
 COPY . .
 
-RUN yarn install --frozen-lockfile \
-  && yarn compile
+RUN apt-get update \
+  # Ts->Js
+  && yarn install --frozen-lockfile \
+  && yarn compile \
+  # Install dependencies for LaTeX
+  && apt-get install texlive-latex-base -y \
+  && apt-get install texlive-fonts-recommended -y \
+  && apt-get install texlive-fonts-extra -y \
+  && apt install texlive-base -y
 
 CMD yarn api:start
