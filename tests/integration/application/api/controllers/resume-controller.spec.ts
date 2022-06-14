@@ -2,6 +2,7 @@ import {Test} from '@nestjs/testing';
 
 import {apiModule} from '../../../../../src/application/api/api-bootstrap';
 import {ResumeController} from '../../../../../src/application/api/controllers/resume-controller';
+import {ResumePtBrFactory} from '../../../../../src/application/api/factories/resume-pt-br-factory';
 
 describe('Given controller for Resume', () => {
   let controller: ResumeController;
@@ -15,7 +16,7 @@ describe('Given controller for Resume', () => {
     it('Should get Lucas Lacerda resume', () => {
       const response = controller.ptBr();
 
-      expect(response.payload).toEqual('Miado Lucas Lacerda');
+      expect(response.payload).toEqual(ResumePtBrFactory.make());
     });
   });
 });

@@ -7,8 +7,4 @@ export class JobEntity {
   description: string;
   companyName: string;
   achievements: AchievementEntity[] = [];
-
-  constructor(partial?: Partial<JobEntity>) {
-    return Object.assign(this, partial);
-  }
 }
