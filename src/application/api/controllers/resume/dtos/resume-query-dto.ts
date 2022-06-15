@@ -1,7 +1,4 @@
-import {IsString} from 'class-validator';
-
 export class ResumeQueryDto {
-  @IsString()
   fileName?: string;
 
   public getFileName() {
