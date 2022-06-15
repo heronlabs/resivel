@@ -6,10 +6,6 @@ bin/
 coverage/
 tests/
 
-# Temp
-temp/*
-!temp/.gitkeep
-
 # Etc
 *.yml
 *.md

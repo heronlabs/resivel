@@ -1,20 +1,12 @@
+import faker from '@faker-js/faker';
 import {Test} from '@nestjs/testing';
-import {existsSync, mkdirSync, rmdirSync, writeFileSync} from 'fs';
 
 import {apiModule} from '../../../../../src/application/api/api-bootstrap';
-import {ResumeController} from '../../../../../src/application/api/controllers/resume-controller';
+import {ResumeQueryDto} from '../../../../../src/application/api/controllers/resume/dtos/resume-query-dto';
+import {ResumeController} from '../../../../../src/application/api/controllers/resume/resume-controller';
 
 describe('Given controller for Resume', () => {
   let controller: ResumeController;
-
-  beforeAll(() => {
-    const path = './temp';
-    if (existsSync(path)) {
-      rmdirSync(path, {recursive: true});
-      mkdirSync(path);
-      writeFileSync(`${path}/.gitkeep`, '');
-    }
-  });
 
   beforeEach(async () => {
     const moduleRef = await Test.createTestingModule(apiModule).compile();
@@ -22,8 +14,29 @@ describe('Given controller for Resume', () => {
   });
 
   describe('Given pt-br route', () => {
-    it('Should get Lucas Lacerda resume', () => {
-      const response = controller.createResumePtBr();
+    it('Should get pdf resume download with default file name', () => {
+      const resumeQueryDto = new ResumeQueryDto();
+      resumeQueryDto.fileName = faker.system.fileName();
+      const responseMock = {
+        set: jest.fn(),
+      };
+      const response = controller.createResumePtBr(
+        resumeQueryDto,
+        responseMock
+      );
+
+      expect(response.getHeaders().type).toEqual('application/octet-stream');
+    });
+
+    it('Should get pdf resume download with custom file name', () => {
+      const resumeQueryDto = new ResumeQueryDto();
+      const responseMock = {
+        set: jest.fn(),
+      };
+      const response = controller.createResumePtBr(
+        resumeQueryDto,
+        responseMock
+      );
 
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });

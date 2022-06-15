@@ -1,7 +1,7 @@
 import {Controller, Get, HttpCode, HttpStatus} from '@nestjs/common';
 
-import {BaseController} from './base-controller';
-import {Envelope} from './base-response';
+import {BaseController} from '../base/base-controller';
+import {Envelope} from '../base/dtos/base-response';
 
 @Controller('health-check')
 export class HealthCheckController extends BaseController {

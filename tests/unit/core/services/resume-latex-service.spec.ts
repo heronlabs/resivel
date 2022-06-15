@@ -1,3 +1,4 @@
+import faker from '@faker-js/faker';
 import * as cp from 'child_process';
 import * as fs from 'fs';
 import {Mock} from 'moq.ts';
@@ -16,10 +17,17 @@ describe('Given service for craft resume latex', () => {
 
   describe('Given create resume latex method', () => {
     it('Should create resume latex', () => {
+      jest
+        .spyOn(fs, 'mkdtempSync')
+        .mockImplementation(() => faker.system.filePath());
+
       jest.spyOn(fs, 'writeFileSync').mockImplementation(jest.fn());
+
       jest.spyOn(cp, 'execSync').mockImplementation(jest.fn());
+
       const pdfFileMock = new Mock<fs.ReadStream>().object();
       jest.spyOn(fs, 'createReadStream').mockReturnValue(pdfFileMock);
+
       const resume = ResumeEntity.make(ResumePtBrMock);
 
       const latexResume = service.createResumeLatex(resume);

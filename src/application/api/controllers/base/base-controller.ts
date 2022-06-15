@@ -1,4 +1,4 @@
-import {Envelope} from './base-response';
+import {Envelope} from './dtos/base-response';
 
 export abstract class BaseController {
   envelope<T>(payload: T): Envelope<T> {

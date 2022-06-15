@@ -8,6 +8,7 @@ const config: Config.InitialOptions = {
     '<rootDir>/src/**/*.ts',
     '!<rootDir>/src/**/*-bootstrap.ts',
     '!<rootDir>/src/**/*-factory.ts',
+    '!<rootDir>/src/**/entry-point.ts',
   ],
   coverageDirectory: 'coverage/unit',
   testMatch: ['<rootDir>/tests/unit/**/*.spec.ts'],

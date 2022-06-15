@@ -338,7 +338,7 @@ export class ResumeLatexTemplate {
 % param 1: percent width, from 0 to 1
 \\newcommand{\\cvqrcode}[1] {
   \\begin{center}
-    \\includegraphics[width={#1}\\mpwidth]{../assets/qrcode.png}
+    \\includegraphics[width={#1}\\mpwidth]{${process.cwd()}/assets/qrcode.png}
   \\end{center}
 }
 
@@ -362,7 +362,7 @@ export class ResumeLatexTemplate {
 %---------------------------------------------------------------------------------------
 %	META IMAGE
 %----------------------------------------------------------------------------------------
-\\includegraphics[width=1\\linewidth]{../assets/profile.png}	%trimming relative to image size
+\\includegraphics[width=1\\linewidth]{${process.cwd()}/assets/profile.png}	%trimming relative to image size
 
 %---------------------------------------------------------------------------------------
 %	META SKILLS
@@ -468,7 +468,9 @@ This numerical approach was highly optimised for cluster computing and implement
 %----------------------------------------------------------------------------------------
 \\fcolorbox{white}{darkcol}{\\begin{minipage}[c][3.5cm][c]{1\\mpwidth}
   \\begin {center}
-    \\HUGE{ \\textbf{ \\textcolor{white}{ \\uppercase{ ${resume.publicName} } } } } \\\\[-24pt]
+    \\HUGE{ \\textbf{ \\textcolor{white}{ \\uppercase{ ${
+      resume.publicName
+    } } } } } \\\\[-24pt]
     \\textcolor{white}{ \\rule{0.1\\textwidth}{1.25pt} } \\\\[4pt]
     \\large{ \\textcolor{white} {Freelance Automation  Consultant and Developer} }
   \\end {center}

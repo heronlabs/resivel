@@ -1,4 +1,4 @@
-import {HealthCheckController} from '../../../../../src/application/api/controllers/health-check-controller';
+import {HealthCheckController} from '../../../../../src/application/api/controllers/health-check/health-check-controller';
 
 describe('Given controller for health check', () => {
   let controller: HealthCheckController;
