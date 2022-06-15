@@ -1,5 +1,6 @@
 import faker from '@faker-js/faker';
 import {Test} from '@nestjs/testing';
+import {existsSync, readdirSync, rmdirSync} from 'fs';
 
 import {apiModule} from '../../../../../src/application/api/api-bootstrap';
 import {ResumeQueryDto} from '../../../../../src/application/api/controllers/resume/dtos/resume-query-dto';
@@ -11,6 +12,17 @@ describe('Given controller for Resume', () => {
   beforeEach(async () => {
     const moduleRef = await Test.createTestingModule(apiModule).compile();
     controller = moduleRef.get(ResumeController);
+  });
+
+  beforeAll(() => {
+    const folders = readdirSync('./').filter(folderName =>
+      folderName.includes('resume-latex-service')
+    );
+
+    folders.forEach(folderName => {
+      const path = `./${folderName}`;
+      if (existsSync(path)) rmdirSync(path, {recursive: true});
+    });
   });
 
   describe('Given pt-br route', () => {

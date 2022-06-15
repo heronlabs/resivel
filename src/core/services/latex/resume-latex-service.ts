@@ -30,7 +30,7 @@ export class ResumeLatexService implements LatexCraft {
 
   createResumeLatex(resume: ResumeEntity): ReadStream {
     const tmpFolderName = 'resume-latex-service';
-    this.tmpDir = mkdtempSync(this.path.join(this.os.tmpdir(), tmpFolderName));
+    this.tmpDir = mkdtempSync(`./${tmpFolderName}`);
     this.fileName = new Date().getTime().toString();
 
     this.createTexFile(resume);
@@ -41,9 +41,4 @@ export class ResumeLatexService implements LatexCraft {
 
     return file;
   }
-
-  constructor(
-    private readonly os = require('os'),
-    private readonly path = require('path')
-  ) {}
 }
