@@ -15,7 +15,7 @@
     "test:e2e": "yarn test --config=tests/e2e/jest.config.ts",
     "api:start": "node bin/application/entry-point.js",
     "docker:build": "docker build -t resume:api .",
-    "docker:up:resume-api": "docker-compose up -d resume-api"
+    "docker:up:resume-api": "docker-compose up --build -d resume-api"
   },
   "devDependencies": {
     "@faker-js/faker": "6.1.2",

@@ -17,15 +17,15 @@ export class ResumePtBrFactory {
             start: 'Fev 2020',
             end: 'Atualmente',
             title: 'Arquiteto',
-            description: 'Artesão de Software & Comunity Manager',
+            description: 'Artesão de Software e Comunity Manager',
             companyName: 'U4crypto',
             achievements: [
               {
                 title:
                   'A U4crypto é uma fintech que atua como solução financeira para arranjos entre instituições bancárias e pessoas.  Atualmente a relação entre os arranjos gera um serviço de software que permite encontrar planos financeiros mais acessiveis. Como complemento aos sistemas que relacionam os arranjos, são fornecidas soluções financeiras no formato de serviço bancário. Para compor essa solução, procuro implementar soluções embasadas nas seguintes obras:',
                 descriptions: [
-                  'Arquitetura Limpa & Código Limpo (Martin C. Robert).',
-                  'Desenvolvimento Orientado a Testes (Kent Beck) & Refatoração (Martin Fowler).',
+                  'Arquitetura Limpa e Código Limpo (Martin C. Robert).',
+                  'Desenvolvimento Orientado a Testes (Kent Beck) e Refatoração (Martin Fowler).',
                   'Desing Orientado a Domínio (Eric Evans).',
                 ],
               },
