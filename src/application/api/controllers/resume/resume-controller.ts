@@ -8,38 +8,33 @@ import {
   Response,
   StreamableFile,
 } from '@nestjs/common';
+import {readFileSync} from 'fs';
 
-import {ResumeDto} from '../../../../core/entities/resume/resume-dto';
 import {ResumeEntity} from '../../../../core/entities/resume/resume-entity';
-import {LatexCraft} from '../../../../core/interfaces/latex-craft';
-import {ResumeLatexService} from '../../../../core/services/latex/resume-latex-service';
-import {BaseController} from '../base/base-controller';
+import {PdfPresenter} from '../../presenters/pdf/pdf-presenter';
 import {ResumeQueryDto} from './dtos/resume-query-dto';
 
 @Controller('resume')
-export class ResumeController extends BaseController {
-  constructor(
-    @Inject('ResumePtBrDto') private readonly resumePtBr: ResumeDto,
-    @Inject(ResumeLatexService) private readonly resumeLatexService: LatexCraft
-  ) {
-    super();
-  }
+export class ResumeController {
+  constructor(@Inject() private readonly pdfPresenter: PdfPresenter) {}
 
-  @Get('/pt-br')
+  @Get('/')
   @HttpCode(HttpStatus.OK)
-  public createResumePtBr(
+  public getResume(
     @Query() query: ResumeQueryDto,
     @Response({passthrough: true}) res
   ): StreamableFile {
-    const resume = ResumeEntity.make(this.resumePtBr);
+    const file = readFileSync('./public/i18n/resume-pt-br.json');
+    const resumePtBr = JSON.parse(file.toString());
+    const resume = ResumeEntity.make(resumePtBr);
 
-    const pdfFile = this.resumeLatexService.createResumeLatex(resume);
+    const response = this.pdfPresenter.envelope(resume, 'resume-html-pdf-view');
 
     res.set({
       'Content-Type': 'application/pdf',
       'Content-Disposition': `attachment; filename="${query.getFileName()}"`,
     });
 
-    return new StreamableFile(pdfFile);
+    return new StreamableFile(response);
   }
 }

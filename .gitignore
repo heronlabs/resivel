@@ -108,8 +108,5 @@ bin/
 # IDE
 .vscode
 
-# Temp
-resume-latex-service-*/
-
 # OSX
 .DS_Store

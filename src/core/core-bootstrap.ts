@@ -1,10 +1,10 @@
 import {Module, ModuleMetadata} from '@nestjs/common';
 
-import {ResumeLatexService} from './services/latex/resume-latex-service';
+import {ResumeService} from './services/resume-service';
 
 export const coreModule: ModuleMetadata = {
-  providers: [ResumeLatexService],
-  exports: [ResumeLatexService],
+  providers: [],
+  exports: [ResumeService],
 };
 
 @Module(coreModule)

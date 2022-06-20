@@ -4,46 +4,42 @@ import {Mock} from 'moq.ts';
 
 import {ResumeQueryDto} from '../../../../../src/application/api/controllers/resume/dtos/resume-query-dto';
 import {ResumeController} from '../../../../../src/application/api/controllers/resume/resume-controller';
-import {LatexCraftMock} from '../../../__mocks__/latex-craft-mock';
-import {ResumePtBrMock} from '../../../__mocks__/resume-pt-br-mock';
+import {
+  PdfPresenterMock,
+  pdfPresenterMock,
+} from '../../../__mocks__/application/api/presenters/pdf-presenter-mock';
 
 describe('Given controller for Resume', () => {
   let controller: ResumeController;
 
   beforeEach(async () => {
-    controller = new ResumeController(ResumePtBrMock, LatexCraftMock);
+    controller = new ResumeController(pdfPresenterMock);
   });
 
-  describe('Given pt-br route', () => {
+  describe('Given resume route', () => {
     it('Should get pdf resume download with default file name', () => {
       const file = new Mock<Buffer>().object();
-      LatexCraftMock.createResumeLatex.mockReturnValueOnce(file);
+      PdfPresenterMock.envelope.mockReturnValueOnce(file);
 
       const resumeQueryDto = new ResumeQueryDto();
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.createResumePtBr(
-        resumeQueryDto,
-        responseMock
-      );
+      const response = controller.getResume(resumeQueryDto, responseMock);
 
       expect(response).toEqual(new StreamableFile(file));
     });
 
     it('Should get pdf resume download with custom file name', () => {
       const file = new Mock<Buffer>().object();
-      LatexCraftMock.createResumeLatex.mockReturnValueOnce(file);
+      PdfPresenterMock.envelope.mockReturnValueOnce(file);
 
       const resumeQueryDto = new ResumeQueryDto();
       resumeQueryDto.fileName = faker.system.fileName();
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.createResumePtBr(
-        resumeQueryDto,
-        responseMock
-      );
+      const response = controller.getResume(resumeQueryDto, responseMock);
 
       expect(response).toEqual(new StreamableFile(file));
     });

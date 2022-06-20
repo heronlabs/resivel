@@ -32,10 +32,7 @@ describe('Given controller for Resume', () => {
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.createResumePtBr(
-        resumeQueryDto,
-        responseMock
-      );
+      const response = controller.getResume(resumeQueryDto, responseMock);
 
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });
@@ -45,10 +42,7 @@ describe('Given controller for Resume', () => {
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.createResumePtBr(
-        resumeQueryDto,
-        responseMock
-      );
+      const response = controller.getResume(resumeQueryDto, responseMock);
 
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });
