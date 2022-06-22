@@ -1,17 +1,23 @@
 import {Inject} from '@nestjs/common';
+import {readFileSync} from 'fs';
 
 import {ConverterHtmlPdf} from '../../../../infrastructure/html-pdf/core/interfaces/converter-html-pdf';
-import {HeadlessBrowser} from '../../../../infrastructure/html-pdf/core/services/headless-browser';
+import {HeadlessBrowserService} from '../../../../infrastructure/html-pdf/core/services/headless-browser-service';
 
 export class PdfPresenter {
-  envelope(payload: unknown, viewName: string): Buffer {
-    // TODO: Recebe o nome da view.
-    // TODO: Uso o hbs para jogar o payload dentro do html.
-    // TODO: Recebe o html-pdf no construtor para gerar o pdf pelo html.
-    throw Error('Not implemented');
+  async envelope(payload: unknown, viewName: string): Promise<Buffer> {
+    const viewFile = readFileSync(`./view/html/${viewName}.hbs`).toString();
+
+    const Handlebars = require('handlebars');
+    const template = Handlebars.compile(viewFile);
+    const view = template(payload);
+
+    const pdf = await this.headlessBrowser.fromHtmlToPdf(view);
+    return pdf;
   }
 
   constructor(
-    @Inject(HeadlessBrowser) private readonly headlessBrowser: ConverterHtmlPdf
+    @Inject(HeadlessBrowserService)
+    private readonly headlessBrowser: ConverterHtmlPdf
   ) {}
 }
