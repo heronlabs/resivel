@@ -16,17 +16,18 @@ import {ResumeQueryDto} from './dtos/resume-query-dto';
 @Controller('resume')
 export class ResumeController {
   constructor(
-    @Inject('ResumeService') private readonly resumeService: ResumeInteractor,
+    @Inject('ResumeInteractor')
+    private readonly resumeInteractor: ResumeInteractor,
     @Inject('PdfPresenter') private readonly pdfPresenter: PdfPresenter
   ) {}
 
-  @Get('/')
+  @Get()
   @HttpCode(HttpStatus.OK)
   public async getResume(
     @Query() query: ResumeQueryDto,
     @Response({passthrough: true}) res
   ): Promise<StreamableFile> {
-    const resume = this.resumeService.findPtBr();
+    const resume = this.resumeInteractor.findPtBr();
 
     const response = await this.pdfPresenter.envelope(
       resume,

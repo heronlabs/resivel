@@ -1,19 +1,19 @@
 import {Module, ModuleMetadata} from '@nestjs/common';
 
-import {HeadlessBrowserService} from './core/services/headless-browser-service';
+import {ConverterHtmlPdfService} from './core/services/converter-html-pdf-service';
 
 export const htmlPdfModule: ModuleMetadata = {
   providers: [
     {
-      useClass: HeadlessBrowserService,
-      provide: 'HeadlessBrowserService',
+      useClass: ConverterHtmlPdfService,
+      provide: 'ConverterHtmlPdf',
     },
     {
       provide: 'PuppeteerNode',
       useFactory: () => require('puppeteer'),
     },
   ],
-  exports: ['HeadlessBrowserService'],
+  exports: ['ConverterHtmlPdf'],
 };
 
 @Module(htmlPdfModule)

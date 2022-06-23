@@ -3,7 +3,7 @@ import {Browser, Page, PuppeteerNode} from 'puppeteer';
 
 import {ConverterHtmlPdf} from '../interfaces/converter-html-pdf';
 
-export class HeadlessBrowserService implements ConverterHtmlPdf {
+export class ConverterHtmlPdfService implements ConverterHtmlPdf {
   private launchBrowser(): Promise<Browser> {
     return this.puppeteer.launch({headless: true, args: ['--no-sandbox']});
   }

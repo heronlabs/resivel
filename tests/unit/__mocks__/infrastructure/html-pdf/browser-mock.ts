@@ -1,14 +1,14 @@
 import {Mock} from 'moq.ts';
 import {Browser} from 'puppeteer';
 
-export const BrowserMock = {
+export const browserMock = {
   newPage: jest.fn(),
   close: jest.fn(),
 };
 
-export const BrowserMoq = new Mock<Browser>()
+export const BrowserMock = new Mock<Browser>()
   .setup(mock => mock.newPage)
-  .returns(BrowserMock.newPage)
+  .returns(browserMock.newPage)
   .setup(mock => mock.close)
-  .returns(BrowserMock.close)
+  .returns(browserMock.close)
   .object();

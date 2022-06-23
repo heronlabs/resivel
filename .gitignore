@@ -110,3 +110,6 @@ bin/
 
 # OSX
 .DS_Store
+
+# PDF Migrations
+pdf-migration-*/

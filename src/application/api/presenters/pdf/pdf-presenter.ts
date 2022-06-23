@@ -8,14 +8,14 @@ export class PdfPresenter {
   async envelope(payload: unknown, viewName: string): Promise<Buffer> {
     const viewFile = readFileSync(`./views/html/${viewName}.hbs`).toString();
 
-    const view = HandlebarsFactory.compile(viewFile, payload);
+    const view = HandlebarsFactory.compileTemplate(viewFile, payload);
 
-    const pdf = await this.headlessBrowserService.fromHtmlToPdf(view);
+    const pdf = await this.converterHtmlPdfService.fromHtmlToPdf(view);
     return pdf;
   }
 
   constructor(
-    @Inject('HeadlessBrowserService')
-    private readonly headlessBrowserService: ConverterHtmlPdf
+    @Inject('ConverterHtmlPdf')
+    private readonly converterHtmlPdfService: ConverterHtmlPdf
   ) {}
 }

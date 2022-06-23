@@ -1,10 +1,17 @@
 import faker from '@faker-js/faker';
 import {Test} from '@nestjs/testing';
-import {existsSync, readdirSync, rmdirSync} from 'fs';
+import {
+  createWriteStream,
+  existsSync,
+  mkdtempSync,
+  readdirSync,
+  rmdirSync,
+} from 'fs';
 
 import {apiModule} from '../../../../../src/application/api/api-bootstrap';
 import {ResumeQueryDto} from '../../../../../src/application/api/controllers/resume/dtos/resume-query-dto';
 import {ResumeController} from '../../../../../src/application/api/controllers/resume/resume-controller';
+import {MigrationPrefix} from '../../../migration-prefix';
 
 describe('Given controller for Resume', () => {
   let controller: ResumeController;
@@ -16,7 +23,7 @@ describe('Given controller for Resume', () => {
 
   beforeAll(() => {
     const folders = readdirSync('./').filter(folderName =>
-      folderName.includes('resume-latex-service')
+      folderName.includes(MigrationPrefix.PDF_MIGRATION)
     );
 
     folders.forEach(folderName => {
@@ -42,8 +49,14 @@ describe('Given controller for Resume', () => {
       const responseMock = {
         set: jest.fn(),
       };
+
       const response = await controller.getResume(resumeQueryDto, responseMock);
 
+      const migrationFolder = mkdtempSync(MigrationPrefix.PDF_MIGRATION);
+      const migrationFile = createWriteStream(
+        `./${migrationFolder}/${new Date().getTime()}.pdf`
+      );
+      response.getStream().pipe(migrationFile);
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });
   });

@@ -15,7 +15,7 @@ describe('Given controller for Resume', () => {
   let controller: ResumeController;
 
   beforeEach(async () => {
-    controller = new ResumeController(ResumeInteractorMock, pdfPresenterMock);
+    controller = new ResumeController(ResumeInteractorMock, PdfPresenterMock);
   });
 
   describe('Given resume route', () => {
@@ -25,7 +25,7 @@ describe('Given controller for Resume', () => {
       );
 
       const file = new Mock<Buffer>().object();
-      PdfPresenterMock.envelope.mockReturnValueOnce(file);
+      pdfPresenterMock.envelope.mockReturnValueOnce(file);
 
       const resumeQueryDto = new ResumeQueryDto();
       const responseMock = {
@@ -42,7 +42,7 @@ describe('Given controller for Resume', () => {
       );
 
       const file = new Mock<Buffer>().object();
-      PdfPresenterMock.envelope.mockReturnValueOnce(file);
+      pdfPresenterMock.envelope.mockReturnValueOnce(file);
 
       const resumeQueryDto = new ResumeQueryDto();
       resumeQueryDto.fileName = faker.system.fileName();

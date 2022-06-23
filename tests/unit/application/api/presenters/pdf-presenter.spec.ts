@@ -23,7 +23,7 @@ describe('Given pdf presenter', () => {
         .mockReturnValueOnce('<html><body>{{ foo }}</body></html>');
 
       jest
-        .spyOn(HandlebarsFactory, 'compile')
+        .spyOn(HandlebarsFactory, 'compileTemplate')
         .mockReturnValueOnce(`<html><body>${payload.foo}</body></html>`);
 
       const pdfMock = new Mock<Buffer>().object();

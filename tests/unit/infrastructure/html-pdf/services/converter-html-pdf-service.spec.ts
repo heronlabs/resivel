@@ -1,15 +1,15 @@
 import {Mock} from 'moq.ts';
 import {Page} from 'puppeteer';
 
-import {HeadlessBrowserService} from '../../../../../src/infrastructure/html-pdf/core/services/headless-browser-service';
-import {BrowserMock} from '../../../__mocks__/infrastructure/html-pdf/browser-mock';
-import {PuppeteerMock} from '../../../__mocks__/infrastructure/html-pdf/puppeteer-mock';
+import {ConverterHtmlPdfService} from '../../../../../src/infrastructure/html-pdf/core/services/converter-html-pdf-service';
+import {browserMock} from '../../../__mocks__/infrastructure/html-pdf/browser-mock';
+import {PuppeteerNodeMock} from '../../../__mocks__/infrastructure/html-pdf/puppeteer-node-mock';
 
-describe('Given headless browser service', () => {
-  let service: HeadlessBrowserService;
+describe('Given converter html pdf service', () => {
+  let service: ConverterHtmlPdfService;
 
   beforeEach(() => {
-    service = new HeadlessBrowserService(PuppeteerMock);
+    service = new ConverterHtmlPdfService(PuppeteerNodeMock);
   });
 
   describe('Given html template', () => {
@@ -29,7 +29,7 @@ describe('Given headless browser service', () => {
         .setup(mock => mock.close)
         .returns(async () => {});
 
-      BrowserMock.newPage.mockResolvedValue(pageMoq.object());
+      browserMock.newPage.mockResolvedValue(pageMoq.object());
 
       await service.fromHtmlToPdf(templateHtml);
 

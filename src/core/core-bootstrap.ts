@@ -1,15 +1,15 @@
 import {Module, ModuleMetadata} from '@nestjs/common';
 
-import {ResumeService} from './services/resume-service';
+import {ResumeInteractorService} from './services/resume-interactor-service';
 
 export const coreModule: ModuleMetadata = {
   providers: [
     {
-      useClass: ResumeService,
-      provide: 'ResumeService',
+      useClass: ResumeInteractorService,
+      provide: 'ResumeInteractor',
     },
   ],
-  exports: ['ResumeService'],
+  exports: ['ResumeInteractor'],
 };
 
 @Module(coreModule)

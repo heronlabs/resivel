@@ -3,13 +3,13 @@ import * as fs from 'fs';
 
 import {ResumeEntity} from '../../../../src/core/entities/resume/resume-entity';
 import {ResumeInteractor} from '../../../../src/core/interfaces/resume-interactor';
-import {ResumeService} from '../../../../src/core/services/resume-service';
+import {ResumeInteractorService} from '../../../../src/core/services/resume-interactor-service';
 
-describe('Given resume service', () => {
+describe('Given resume interactor service', () => {
   let service: ResumeInteractor;
 
   beforeEach(() => {
-    service = new ResumeService();
+    service = new ResumeInteractorService();
   });
 
   describe('Given pt br find method', () => {
