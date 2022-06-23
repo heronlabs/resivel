@@ -11,5 +11,7 @@ export class HealthCheckController {
     return this.jsonPresenter.envelope('OK');
   }
 
-  constructor(@Inject() private readonly jsonPresenter: JsonPresenter) {}
+  constructor(
+    @Inject('JsonPresenter') private readonly jsonPresenter: JsonPresenter
+  ) {}
 }

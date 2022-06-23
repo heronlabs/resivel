@@ -8,27 +8,30 @@ import {
   Response,
   StreamableFile,
 } from '@nestjs/common';
-import {readFileSync} from 'fs';
 
-import {ResumeEntity} from '../../../../core/entities/resume/resume-entity';
+import {ResumeInteractor} from '../../../../core/interfaces/resume-interactor';
 import {PdfPresenter} from '../../presenters/pdf/pdf-presenter';
 import {ResumeQueryDto} from './dtos/resume-query-dto';
 
 @Controller('resume')
 export class ResumeController {
-  constructor(@Inject() private readonly pdfPresenter: PdfPresenter) {}
+  constructor(
+    @Inject('ResumeService') private readonly resumeService: ResumeInteractor,
+    @Inject('PdfPresenter') private readonly pdfPresenter: PdfPresenter
+  ) {}
 
   @Get('/')
   @HttpCode(HttpStatus.OK)
-  public getResume(
+  public async getResume(
     @Query() query: ResumeQueryDto,
     @Response({passthrough: true}) res
-  ): StreamableFile {
-    const file = readFileSync('./public/i18n/resume-pt-br.json');
-    const resumePtBr = JSON.parse(file.toString());
-    const resume = ResumeEntity.make(resumePtBr);
+  ): Promise<StreamableFile> {
+    const resume = this.resumeService.findPtBr();
 
-    const response = this.pdfPresenter.envelope(resume, 'resume-html-pdf-view');
+    const response = await this.pdfPresenter.envelope(
+      resume,
+      'resume-html-pdf-view'
+    );
 
     res.set({
       'Content-Type': 'application/pdf',

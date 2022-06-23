@@ -4,20 +4,26 @@ import {Mock} from 'moq.ts';
 
 import {ResumeQueryDto} from '../../../../../src/application/api/controllers/resume/dtos/resume-query-dto';
 import {ResumeController} from '../../../../../src/application/api/controllers/resume/resume-controller';
+import {ResumeEntity} from '../../../../../src/core/entities/resume/resume-entity';
 import {
   PdfPresenterMock,
   pdfPresenterMock,
 } from '../../../__mocks__/application/api/presenters/pdf-presenter-mock';
+import {ResumeInteractorMock} from '../../../__mocks__/core/services/resume-interactor-mock';
 
 describe('Given controller for Resume', () => {
   let controller: ResumeController;
 
   beforeEach(async () => {
-    controller = new ResumeController(pdfPresenterMock);
+    controller = new ResumeController(ResumeInteractorMock, pdfPresenterMock);
   });
 
   describe('Given resume route', () => {
-    it('Should get pdf resume download with default file name', () => {
+    it('Should get pdf resume download with default file name', async () => {
+      ResumeInteractorMock.findPtBr.mockReturnValueOnce(
+        new Mock<ResumeEntity>().object()
+      );
+
       const file = new Mock<Buffer>().object();
       PdfPresenterMock.envelope.mockReturnValueOnce(file);
 
@@ -25,12 +31,16 @@ describe('Given controller for Resume', () => {
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.getResume(resumeQueryDto, responseMock);
+      const response = await controller.getResume(resumeQueryDto, responseMock);
 
       expect(response).toEqual(new StreamableFile(file));
     });
 
-    it('Should get pdf resume download with custom file name', () => {
+    it('Should get pdf resume download with custom file name', async () => {
+      ResumeInteractorMock.findPtBr.mockReturnValueOnce(
+        new Mock<ResumeEntity>().object()
+      );
+
       const file = new Mock<Buffer>().object();
       PdfPresenterMock.envelope.mockReturnValueOnce(file);
 
@@ -39,7 +49,7 @@ describe('Given controller for Resume', () => {
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.getResume(resumeQueryDto, responseMock);
+      const response = await controller.getResume(resumeQueryDto, responseMock);
 
       expect(response).toEqual(new StreamableFile(file));
     });

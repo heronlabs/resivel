@@ -12,6 +12,7 @@ describe('Given json presenter', () => {
   describe('Given an object with type', () => {
     it('Should return envelope payload', () => {
       const payload = faker.datatype.string();
+
       const result = presenter.envelope(payload);
 
       expect(result).toEqual({

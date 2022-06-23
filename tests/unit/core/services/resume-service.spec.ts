@@ -2,11 +2,11 @@ import faker from '@faker-js/faker';
 import * as fs from 'fs';
 
 import {ResumeEntity} from '../../../../src/core/entities/resume/resume-entity';
-import {Resume} from '../../../../src/core/interfaces/resume';
+import {ResumeInteractor} from '../../../../src/core/interfaces/resume-interactor';
 import {ResumeService} from '../../../../src/core/services/resume-service';
 
 describe('Given resume service', () => {
-  let service: Resume;
+  let service: ResumeInteractor;
 
   beforeEach(() => {
     service = new ResumeService();

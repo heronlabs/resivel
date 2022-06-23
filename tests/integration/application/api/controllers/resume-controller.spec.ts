@@ -26,23 +26,23 @@ describe('Given controller for Resume', () => {
   });
 
   describe('Given pt-br route', () => {
-    it('Should get pdf resume download with default file name', () => {
+    it('Should get pdf resume download with default file name', async () => {
       const resumeQueryDto = new ResumeQueryDto();
       resumeQueryDto.fileName = faker.system.fileName();
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.getResume(resumeQueryDto, responseMock);
+      const response = await controller.getResume(resumeQueryDto, responseMock);
 
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });
 
-    it('Should get pdf resume download with custom file name', () => {
+    it('Should get pdf resume download with custom file name', async () => {
       const resumeQueryDto = new ResumeQueryDto();
       const responseMock = {
         set: jest.fn(),
       };
-      const response = controller.getResume(resumeQueryDto, responseMock);
+      const response = await controller.getResume(resumeQueryDto, responseMock);
 
       expect(response.getHeaders().type).toEqual('application/octet-stream');
     });

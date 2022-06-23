@@ -1,5 +1,5 @@
 import {ResumeEntity} from '../entities/resume/resume-entity';
 
-export interface Resume {
+export interface ResumeInteractor {
   findPtBr(): ResumeEntity;
 }

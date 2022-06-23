@@ -1,9 +1,9 @@
 import {readFileSync} from 'fs';
 
 import {ResumeEntity} from '../entities/resume/resume-entity';
-import {Resume} from '../interfaces/resume';
+import {ResumeInteractor} from '../interfaces/resume-interactor';
 
-export class ResumeService implements Resume {
+export class ResumeService implements ResumeInteractor {
   findPtBr(): ResumeEntity {
     const file = readFileSync('./public/i18n/resume-pt-br.json');
     const resumePtBr = JSON.parse(file.toString());

@@ -33,6 +33,6 @@ export class HeadlessBrowserService implements ConverterHtmlPdf {
   }
 
   constructor(
-    @Inject(PuppeteerNode) private readonly puppeteer: PuppeteerNode
+    @Inject('PuppeteerNode') private readonly puppeteer: PuppeteerNode
   ) {}
 }
