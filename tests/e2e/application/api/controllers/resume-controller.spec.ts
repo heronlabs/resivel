@@ -20,7 +20,9 @@ describe('Given controller for Resume', () => {
 
   describe('Given pt-br route', () => {
     it('Should get pdf resume download with default file name', async () => {
-      const response = await request(app.getHttpServer()).get('/resume').send();
+      const response = await request(app.getHttpServer())
+        .get('/resume/pdf')
+        .send();
 
       expect(response.statusCode).toEqual(HttpStatus.OK);
     });
@@ -29,7 +31,7 @@ describe('Given controller for Resume', () => {
       const customFileName = `${faker.datatype.uuid()}.pdf`;
 
       const response = await request(app.getHttpServer())
-        .get(`/resume?fileName=${customFileName}`)
+        .get(`/resume/pdf?fileName=${customFileName}`)
         .send();
 
       expect(response.statusCode).toEqual(HttpStatus.OK);

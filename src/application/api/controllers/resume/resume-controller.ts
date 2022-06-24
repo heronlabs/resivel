@@ -21,7 +21,7 @@ export class ResumeController {
     @Inject('PdfPresenter') private readonly pdfPresenter: PdfPresenter
   ) {}
 
-  @Get()
+  @Get('/pdf')
   @HttpCode(HttpStatus.OK)
   public async getResume(
     @Query() query: ResumeQueryDto,
