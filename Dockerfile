@@ -1,18 +1,17 @@
-FROM node:14
-
-# Informando o Puppeteer para não instalar o Google Chromium.
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
-    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
+FROM node:14-alpine
 
 USER root
+
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
+    PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
 WORKDIR /app
 
 COPY . .
 
-RUN apt-get update \
+RUN \
   # Ts->Js
-  && yarn install --frozen-lockfile \
+  yarn install --frozen-lockfile \
   && yarn compile \
   # Puppeteer
   && apk add --no-cache ca-certificates chromium nss freetype harfbuzz ttf-freefont
