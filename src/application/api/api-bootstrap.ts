@@ -6,17 +6,12 @@ import {HtmlPdfBootstrap} from '../../infrastructure/html-pdf/html-pdf-bootstrap
 import {HealthCheckController} from './controllers/health-check/health-check-controller';
 import {ResumeController} from './controllers/resume/resume-controller';
 import {JsonPresenter} from './presenters/json/json-presenter';
-import {PdfPresenter} from './presenters/pdf/pdf-presenter';
 
 export const apiModule: ModuleMetadata = {
   providers: [
     {
       provide: APP_PIPE,
       useFactory: () => new ValidationPipe({transform: true}),
-    },
-    {
-      useClass: PdfPresenter,
-      provide: 'PdfPresenter',
     },
     {
       useClass: JsonPresenter,

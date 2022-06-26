@@ -3,7 +3,7 @@ import 'reflect-metadata';
 import {INestApplication} from '@nestjs/common';
 import {NestFactory} from '@nestjs/core';
 
-import {ApiBootstrap} from './api/api-bootstrap';
+import {ApiBootstrap} from './application/api/api-bootstrap';
 
 ('use strict');
 

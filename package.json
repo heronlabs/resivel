@@ -13,7 +13,7 @@
     "test:unit": "yarn test --config=tests/unit/jest.config.ts",
     "test:integration": "yarn test --config=tests/integration/jest.config.ts",
     "test:e2e": "yarn test --config=tests/e2e/jest.config.ts",
-    "api:start": "node bin/application/entry-point.js",
+    "api:start": "node bin/entry-point.js",
     "docker:build": "docker build -t resume:api .",
     "docker:up:resume-api": "docker-compose up --build -d resume-api"
   },

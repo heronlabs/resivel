@@ -4,10 +4,6 @@ import {Browser, Page, PuppeteerNode} from 'puppeteer';
 import {ConverterHtmlPdf} from '../interfaces/converter-html-pdf';
 
 export class ConverterHtmlPdfService implements ConverterHtmlPdf {
-  private launchBrowser(): Promise<Browser> {
-    return this.puppeteer.launch({headless: true, args: ['--no-sandbox']});
-  }
-
   private async getHtmlPage(
     browser: Browser,
     htmlTemplate: string
@@ -20,7 +16,10 @@ export class ConverterHtmlPdfService implements ConverterHtmlPdf {
   }
 
   async fromHtmlToPdf(html: string): Promise<Buffer> {
-    const browser = await this.launchBrowser();
+    const browser = await this.puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox'],
+    });
 
     const page: Page = await this.getHtmlPage(browser, html);
 

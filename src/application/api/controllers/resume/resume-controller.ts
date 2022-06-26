@@ -10,7 +10,7 @@ import {
 } from '@nestjs/common';
 
 import {ResumeInteractor} from '../../../../core/interfaces/resume-interactor';
-import {PdfPresenter} from '../../presenters/pdf/pdf-presenter';
+import {PdfPresenter} from '../../../../infrastructure/html-pdf/application/presenters/pdf-presenter';
 import {ResumeQueryDto} from './dtos/resume-query-dto';
 
 @Controller('resume')
@@ -27,11 +27,12 @@ export class ResumeController {
     @Query() query: ResumeQueryDto,
     @Response({passthrough: true}) res
   ): Promise<StreamableFile> {
-    const resume = this.resumeInteractor.findPtBr();
+    const resumeEntity = this.resumeInteractor.findPtBr();
 
+    const pdfHtmlTemplateName = 'resume';
     const response = await this.pdfPresenter.envelope(
-      resume,
-      'resume-html-pdf-view'
+      resumeEntity,
+      pdfHtmlTemplateName
     );
 
     res.set({

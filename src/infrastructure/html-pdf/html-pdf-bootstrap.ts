@@ -1,5 +1,6 @@
 import {Module, ModuleMetadata} from '@nestjs/common';
 
+import {PdfPresenter} from './application/presenters/pdf-presenter';
 import {ConverterHtmlPdfService} from './core/services/converter-html-pdf-service';
 
 export const htmlPdfModule: ModuleMetadata = {
@@ -12,8 +13,12 @@ export const htmlPdfModule: ModuleMetadata = {
       provide: 'PuppeteerNode',
       useFactory: () => require('puppeteer'),
     },
+    {
+      useClass: PdfPresenter,
+      provide: 'PdfPresenter',
+    },
   ],
-  exports: ['ConverterHtmlPdf'],
+  exports: ['PdfPresenter'],
 };
 
 @Module(htmlPdfModule)
