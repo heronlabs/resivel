@@ -23,9 +23,7 @@ describe('Given pdf presenter', () => {
 
       const htmlViewFile = `
         <html>
-          {{#if author}}
           <style type="text/css">{{ __style__ }}</style>
-          {{/if}}
           <body>
             <div class="title">
               {{ foo }}
