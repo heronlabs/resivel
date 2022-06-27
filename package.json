@@ -1,7 +1,7 @@
 {
   "name": "resume",
   "version": "1.0.0",
-  "description": "Create your resume dynamically",
+  "description": "This is an api to make your resume available.",
   "engines": {
     "node": ">=14.17.6"
   },
