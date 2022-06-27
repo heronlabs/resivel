@@ -12,6 +12,6 @@ export class HealthCheckController {
   }
 
   constructor(
-    @Inject('JsonPresenter') private readonly jsonPresenter: JsonPresenter
+    @Inject(JsonPresenter) private readonly jsonPresenter: JsonPresenter
   ) {}
 }

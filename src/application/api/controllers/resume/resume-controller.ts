@@ -10,15 +10,16 @@ import {
 } from '@nestjs/common';
 
 import {ResumeInteractor} from '../../../../core/interfaces/resume-interactor';
+import {ResumeInteractorService} from '../../../../core/services/resume-interactor-service';
 import {PdfPresenter} from '../../../../infrastructure/html-pdf/application/presenters/pdf-presenter';
 import {ResumeQueryDto} from './dtos/resume-query-dto';
 
 @Controller('resume')
 export class ResumeController {
   constructor(
-    @Inject('ResumeInteractor')
+    @Inject(ResumeInteractorService)
     private readonly resumeInteractor: ResumeInteractor,
-    @Inject('PdfPresenter') private readonly pdfPresenter: PdfPresenter
+    @Inject(PdfPresenter) private readonly pdfPresenter: PdfPresenter
   ) {}
 
   @Get('/pdf')

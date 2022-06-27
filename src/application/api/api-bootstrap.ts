@@ -13,10 +13,7 @@ export const apiModule: ModuleMetadata = {
       provide: APP_PIPE,
       useFactory: () => new ValidationPipe({transform: true}),
     },
-    {
-      useClass: JsonPresenter,
-      provide: 'JsonPresenter',
-    },
+    JsonPresenter,
   ],
   imports: [CoreBootstrap, HtmlPdfBootstrap],
   controllers: [HealthCheckController, ResumeController],

@@ -6,19 +6,13 @@ import {ConverterHtmlPdfService} from './core/services/converter-html-pdf-servic
 export const htmlPdfModule: ModuleMetadata = {
   providers: [
     {
-      useClass: ConverterHtmlPdfService,
-      provide: 'ConverterHtmlPdf',
-    },
-    {
       provide: 'PuppeteerNode',
       useFactory: () => require('puppeteer'),
     },
-    {
-      useClass: PdfPresenter,
-      provide: 'PdfPresenter',
-    },
+    ConverterHtmlPdfService,
+    PdfPresenter,
   ],
-  exports: ['PdfPresenter'],
+  exports: [PdfPresenter],
 };
 
 @Module(htmlPdfModule)

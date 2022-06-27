@@ -2,6 +2,7 @@ import {Inject} from '@nestjs/common';
 import {readFileSync} from 'fs';
 
 import {ConverterHtmlPdf} from '../../core/interfaces/converter-html-pdf';
+import {ConverterHtmlPdfService} from '../../core/services/converter-html-pdf-service';
 import {HandlebarsFactory} from '../factories/handlebars-factory';
 
 export class PdfPresenter {
@@ -30,7 +31,7 @@ export class PdfPresenter {
   }
 
   constructor(
-    @Inject('ConverterHtmlPdf')
+    @Inject(ConverterHtmlPdfService)
     private readonly converterHtmlPdfService: ConverterHtmlPdf
   ) {}
 }
