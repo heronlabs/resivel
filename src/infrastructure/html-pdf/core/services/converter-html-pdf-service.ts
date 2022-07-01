@@ -10,7 +10,9 @@ export class ConverterHtmlPdfService implements ConverterHtmlPdf {
   ): Promise<Page> {
     const page: Page = await browser.newPage();
 
-    await page.setContent(htmlTemplate);
+    await page.setContent(htmlTemplate, {
+      waitUntil: 'networkidle0',
+    });
 
     return page;
   }
@@ -23,7 +25,11 @@ export class ConverterHtmlPdfService implements ConverterHtmlPdf {
 
     const page: Page = await this.getHtmlPage(browser, html);
 
-    const pdfBuffer = await page.pdf();
+    const pdfBuffer = await page.pdf({
+      printBackground: true,
+      format: 'A4',
+      displayHeaderFooter: true,
+    });
 
     await page.close();
     await browser.close();

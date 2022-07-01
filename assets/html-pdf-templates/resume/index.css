@@ -1,3 +1,314 @@
-.title {
-  color: red;
+*{
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main{
+  width: 21cm;
+  min-height: 29.7cm;
+  position: relative;
+  top: 20px;
+}
+.section1{
+  width: 40%;
+  height: 1197px;
+  background-color: #2397ee;
+  position: absolute;
+  left: 50px;
+  display: inline;
+}
+.section1 .img{
+  width: 100%;
+  height: 100%;
+  padding: 20px 20px 0px;
+  position: relative;
+  top: 20px;
+  left: 35px;
+}
+.section1 .img img{
+  width: 200px;
+  height: 200px;
+  background-color: #ffffff;
+  padding-top: 10px;
+  clip-path: polygon(50% 0, 100% 26%, 100% 75%, 50% 100%, 0 75%, 0 26%);
+}
+.section1 .sect1-cont{
+  position: absolute;
+  top: 26%;
+  width: 100%;
+}
+.section1 .sect1-cont ul{
+  position: relative;
+  line-height: 20px;
+}
+.section1 .sect1-cont h2{
+  display: block;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0px 0px 10px 10px;
+  position: relative;
+}
+.section1 .sect1-cont h2:after{
+  content: " ";
+  position: absolute;
+  top: 30px;
+  margin-left: 2px;
+  display: block;
+  width: 100px;
+  border-bottom: 5px solid #F2F4F4;
+}
+.edu_cont{
+  padding-left: 40px;
+}
+.edu_cont span{
+  color: #f1f1f1;
+}
+.edu_cont p{
+  font-weight: bold;
+  font-size: 13px;
+}
+.edu_cont h3{
+  color: #fff;
+  font-size: 15px;
+}
+.skil-header{
+  position: relative;
+  padding: 0;
+}
+.skil-header h1{
+  color: #fff;
+  text-transform: uppercase;
+}
+.skil-header h1:after{
+  content: " ";
+  position: absolute;
+  top:125px;
+  margin-left: 2px;
+  display: block;
+  width: 100px;
+  border-bottom: 5px solid #F2F4F4;
+}
+.skill_cont{
+  margin-top: -20px;
+  padding: 0px 0 0px 20px;
+}
+.skill_cont p {
+  margin: 5px 0 0 2px;
+  font-size: 13px;
+  color: #fff;
+  padding-top: 12px;
+}
+.skill_cont span{
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  position: relative;
+  display: block;
+  top: -20px;
+}
+.skill_container {
+  background-color: rgb(192, 192, 192);
+  width: 90%;
+  height: 10px;
+  border-radius: 15px;
+}
+.skill {
+  background-color: #fff;
+  color: #2397ee;
+  padding-right: 5px;
+  text-align: right;
+  font-size: 10px;
+  height: 10px;
+  border-radius: 15px;
+}
+.html {
+  width: 80%;
+}
+.php {
+  width: 60%;
+}
+.section1 .sect1-cont ul li{
+  list-style: none;
+  text-decoration: none;
+  line-height: 15px;
+}
+.skill3{
+  width: 50%;
+}
+.skill4{
+  width: 90%;
+}
+.skill5{
+  width: 70%;
+}
+.contact p{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  margin: 10px 0 0;
+  display: inline-block;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+.small-icon{
+  width: 30px !important;
+  height: 30px !important;
+  margin-top: -20px;
+}
+.contact img{
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  margin-left: -15px;
+}
+/* ==================== SECTION-2 ==================*/
+.section2{
+  display: inline;
+  width: 80%;
+  height: 100% auto;
+  background-color:#f1f1f1;
+  position: absolute;
+  top: 0;
+  left: 46.3%;
+}
+.section2 .heading {
+  position: relative;
+  padding: 5px 0px 0px;
+}
+.section2 .mainhead{
+  width: 100% auto;
+}
+.section2 h2{
+  margin-left: 10px;
+  color: #2397ee;
+  text-transform: uppercase;
+  padding: 0;
+  margin-top: 0;
+}
+.section2 h2:after{
+  content: " ";
+  position: absolute;
+  top: 40px;
+  margin-left: 2px;
+  display: block;
+  width: 80px;
+  border-bottom: 5px solid #2397ee;
+}
+.section2 .heading h1{
+  color: #2397ee;
+  font-size: 45px;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+  padding: 10px 0 0px;
+  position: relative;
+}
+.section2 .heading h1:after{
+  content: " ";
+  position: absolute;
+  top: 75px;
+  left: 265px;
+  display: block;
+  width: 100px;
+  border-bottom: 3px solid #2397ee;
+  padding: 0;
+}
+.section2 .heading h4{
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 0;
+  margin-top: -20px;
+}
+.section2 p{
+  padding-top: 0;
+  font-weight: 500;
+  width: 450px;
+  padding-left: 35px;
+}
+/*=========================== EXPERIENCE ===========================*/
+.exp{
+  position: relative;
+  top: 0;
+}
+.exp-cont{
+  position: relative;
+  width: 100%;
+}
+.exp-detail {
+  padding: 0 0 0 20px;
+  margin-top: 0px;
+  width: 100%;
+}
+.exp-detail b{
+  margin-top: 0;
+  margin-left: 40px;
+}
+.exp-detail ul{
+  margin-left: 50px;
+}
+.exp-detail h3{
+  padding: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.exp-detail h6{
+  color: #2397ee;
+  font-size: 15px;
+  margin-top: -20px;
+  padding-bottom: 0;
+}
+.exp-detail p{
+  padding: 0%;
+  width: 90%;
+  margin-top: -30px;
+}
+.exp-year {
+  background: #2397ee;
+  width: 120px;
+  float: right;
+  height: 25px;
+  padding-top: 5px;
+  margin-right: 50px;
+}
+.exp-year span{
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-left: 25px;
+}
+.ref_cont{
+  width: 40%;
+  display: inline-block;
+  padding-left: 20px;
+  padding-top: 0;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.ref_cont h4{
+  margin-top: 2px;
+  font-size: 14px;
+  color: #2397ee;
+}
+.ref_cont span{
+  padding: 0;
+  margin-top: -15px !important;
+  display: block;
+}
+.ref_cont p{
+  display: block;
+  margin: 2px 0 0 -3px;
+  padding: 0;
+  color: #2397ee;
 }
