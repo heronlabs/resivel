@@ -11,14 +11,12 @@ body {
   width: 21cm;
   min-height: 29.7cm;
   position: relative;
-  top: 20px;
 }
 .section1{
   width: 40%;
   height: 1197px;
   background-color: #2397ee;
   position: absolute;
-  left: 50px;
   display: inline;
 }
 .section1 .img{
@@ -30,11 +28,10 @@ body {
   left: 35px;
 }
 .section1 .img img{
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   background-color: #ffffff;
-  padding-top: 10px;
-  clip-path: polygon(50% 0, 100% 26%, 100% 75%, 50% 100%, 0 75%, 0 26%);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }
 .section1 .sect1-cont{
   position: absolute;
@@ -168,15 +165,14 @@ body {
   color: #fff;
   margin-left: -15px;
 }
-/* ==================== SECTION-2 ==================*/
 .section2{
   display: inline;
-  width: 80%;
+  width: 90%;
   height: 100% auto;
   background-color:#f1f1f1;
   position: absolute;
   top: 0;
-  left: 46.3%;
+  left: 40%;
 }
 .section2 .heading {
   position: relative;
@@ -215,11 +211,13 @@ body {
   content: " ";
   position: absolute;
   top: 75px;
-  left: 265px;
+  left: 0;
+  right: 0;
   display: block;
   width: 100px;
   border-bottom: 3px solid #2397ee;
   padding: 0;
+  margin: 0 auto;
 }
 .section2 .heading h4{
   color: #000;
@@ -233,10 +231,10 @@ body {
 .section2 p{
   padding-top: 0;
   font-weight: 500;
-  width: 450px;
-  padding-left: 35px;
+  width: 94%;
+  padding-left: 20px;
+  text-align: justify;
 }
-/*=========================== EXPERIENCE ===========================*/
 .exp{
   position: relative;
   top: 0;
@@ -248,14 +246,14 @@ body {
 .exp-detail {
   padding: 0 0 0 20px;
   margin-top: 0px;
-  width: 100%;
+  width: 94%;
 }
 .exp-detail b{
   margin-top: 0;
   margin-left: 40px;
 }
 .exp-detail ul{
-  margin-left: 50px;
+  width: 80%;
 }
 .exp-detail h3{
   padding: 0px;
@@ -275,18 +273,15 @@ body {
 }
 .exp-year {
   background: #2397ee;
-  width: 120px;
   float: right;
   height: 25px;
-  padding-top: 5px;
+  padding: 5px 20px;
   margin-right: 50px;
 }
 .exp-year span{
   color: #fff;
   text-align: center;
   font-weight: bold;
-  padding-top: 15px;
-  padding-left: 25px;
 }
 .ref_cont{
   width: 40%;

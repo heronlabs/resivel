@@ -19,7 +19,8 @@ export class ConverterHtmlPdfService implements ConverterHtmlPdf {
 
   async fromHtmlToPdf(html: string): Promise<Buffer> {
     const browser = await this.puppeteer.launch({
-      headless: true,
+      // headless: false,
+      // defaultViewport: null,
       args: ['--no-sandbox'],
     });
 
@@ -29,6 +30,12 @@ export class ConverterHtmlPdfService implements ConverterHtmlPdf {
       printBackground: true,
       format: 'A4',
       displayHeaderFooter: true,
+      margin: {
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+      },
     });
 
     await page.close();

@@ -1,27 +1,26 @@
-import {AchievementEntity} from '../job/achievement-entity';
-import {JobEntity} from '../job/job-entity';
+import {ProfileEntity} from '../profile/profile-entity';
+import {AchievementEntity} from '../work-experience/achievement-entity';
+import {JobEntity} from '../work-experience/job-entity';
+import {WorkExperienceEntity} from '../work-experience/work-experience-entity';
 import {ResumeDto} from './resume-dto';
-import {ProfileEntity} from './topics/profile-entity';
-import {WorkExperienceEntity} from './topics/work-experience-entity';
 
 export class ResumeEntity {
-  publicName: string;
-  description: string;
   profile: ProfileEntity;
   workExperience: WorkExperienceEntity;
 
   static make(resumeDto: ResumeDto): ResumeEntity {
     const resume = new ResumeEntity();
-    resume.publicName = resumeDto.publicName;
-    resume.description = resumeDto.description;
 
     const profile = new ProfileEntity();
     profile.label = resumeDto.profile.label;
+    profile.publicName = resumeDto.profile.publicName;
+    profile.picture = resumeDto.profile.picture;
     profile.description = resumeDto.profile.description;
+    profile.introduction = resumeDto.profile.introduction;
     resume.profile = profile;
 
     const workExperience = new WorkExperienceEntity();
-    workExperience.title = resumeDto.workExperience.title;
+    workExperience.label = resumeDto.workExperience.label;
     workExperience.jobs = resumeDto.workExperience.jobs.map(jobDto => {
       const job = new JobEntity();
       job.start = jobDto.start;
@@ -38,6 +37,8 @@ export class ResumeEntity {
       return job;
     });
     resume.workExperience = workExperience;
+
+    // TODO: Criar skills
 
     return resume;
   }

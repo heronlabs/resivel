@@ -1,15 +1,32 @@
 {
-  "publicName": "Lucas Lacerda",
-  "description": "Arquiteto | Software",
   "profile": {
     "label": "Perfil",
-    "description": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos, mas principalmente tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei. Atualmente, todo esse aprendizado me permitiu entender melhor a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos,  eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem. Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos. Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas."
+    "publicName": "Lucas Lacerda",
+    "description": "Arquiteto | Software",
+    "picture": "https://s.gravatar.com/avatar/460ad6fc6315df853768239ce41643dc?s=600",
+    "introduction": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos, mas principalmente tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei.<br>Atualmente, todo esse aprendizado me permitiu entender melhor a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos,  eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem.<br>Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos.<br>Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas."
   },
   "workExperience": {
-    "title": "Experiência de trabalho",
+    "label": "Experiência de trabalho",
     "jobs": [
       {
-        "start": "Fev 2020",
+        "start": "Jun 20",
+        "end": "Atualmente",
+        "title": "Co-founder",
+        "description": "Artesão de Software",
+        "companyName": "HeronLabs",
+        "achievements": [
+          {
+            "title": "Heron Labs é a minha empresa fundada em parceria com meu sócio Victor Amorim. Nosso foco é fornecer serviços e consultórias tecnologicas com qualidade.",
+            "descriptions": [
+              "Vai-TS",
+              "Resume"
+            ]
+          }
+        ]
+      },
+      {
+        "start": "Fev 20",
         "end": "Atualmente",
         "title": "Arquiteto",
         "description": "Artesão de Software e Comunity Manager",
@@ -26,8 +43,8 @@
         ]
       },
       {
-        "start": "Fev 2019",
-        "end": "Out 2019",
+        "start": "Fev 19",
+        "end": "Out 19",
         "title": "Engenheiro Front-end",
         "description": "Desenvolvedor React no squad Hotmart Club",
         "companyName": "Hotmart",
@@ -43,8 +60,8 @@
         ]
       },
       {
-        "start": "Dez 2017",
-        "end": "Nov 2018",
+        "start": "Dez 17",
+        "end": "Nov 18",
         "title": "Líder técnico",
         "description": "Desenvolvedor full-stack e Scrum Master",
         "companyName": "Meep",
@@ -60,8 +77,8 @@
         ]
       },
       {
-        "start": "Dez 2016",
-        "end": "Dez 2017",
+        "start": "Dez 16",
+        "end": "Dez 17",
         "title": "Desenvolvedor Full-stack",
         "description": "Desenvolvedor Full-stack em um produto interno",
         "companyName": "Teknisa",
@@ -76,8 +93,8 @@
         ]
       },
       {
-        "start": "Jan 2015",
-        "end": "Jul 2015",
+        "start": "Jan 15",
+        "end": "Jul 15",
         "title": "Desenvolvedor Júnior",
         "description": "Suporte e manutenção",
         "companyName": "Akmos",
@@ -93,8 +110,8 @@
         ]
       },
       {
-        "start": "Jan 2013",
-        "end": "Dez 2014",
+        "start": "Jan 13",
+        "end": "Dez 14",
         "title": "Webdesigner",
         "description": "Criação de sites e identidade visual",
         "companyName": "Freelancer",
@@ -108,6 +125,210 @@
             ]
           }
         ]
+      }
+    ]
+  },
+  "education": {
+    "label": "Formação Acadêmica",
+    "institutions": [
+      {
+        "name": "São Paulo da Cruz",
+        "type": "Ensino médio",
+        "duration": "2013"
+      },
+      {
+        "name": "Universidade Federal de Minas Gerais (UFMG)",
+        "type": "Ensino superior incompleto",
+        "duration": "2015-2019"
+      }
+    ]
+  },
+  "skills": {
+    "label": "Habilidades",
+    "software": [
+      {
+        "name": "S.O.L.I.D.",
+        "levelPercentage": "100"
+      },
+      {
+        "name": "Princípios dos componentes",
+        "levelPercentage": "75"
+      },
+      {
+        "name": "Testes automatizados (TDD)",
+        "levelPercentage": "95"
+      },
+      {
+        "name": "Modelagem & Domínio (DDD)",
+        "levelPercentage": "80"
+      },
+      {
+        "name": "Infraestrutura como código (IaC)",
+        "levelPercentage": "60"
+      }
+    ],
+    "architecture": [
+      {
+        "name": "Arquitetura Nuvem",
+        "levelPercentage": "100"
+      },
+      {
+        "name": "Arquitetura On-premise",
+        "levelPercentage": "30"
+      },
+      {
+        "name": "Arquitetura Serverless",
+        "levelPercentage": "60"
+      },
+      {
+        "name": "Pacotes NodeJS",
+        "levelPercentage": "100"
+      },
+      {
+        "name": "Application Programming Interface (API)",
+        "levelPercentage": "90"
+      },
+      {
+        "name": "Command-Line Interface (CLI)",
+        "levelPercentage": "70"
+      }
+    ],
+    "programmingLanguagens": [
+      {
+        "name": "Typescript",
+        "levelPercentage": "100"
+      },
+      {
+        "name": "Javascript",
+        "levelPercentage": "80"
+      },
+      {
+        "name": "C#",
+        "levelPercentage": "60"
+      },
+      {
+        "name": "SQL",
+        "levelPercentage": "50"
+      },
+      {
+        "name": "Shell",
+        "levelPercentage": "40"
+      },
+      {
+        "name": "C/C++",
+        "levelPercentage": "30"
+      },
+      {
+        "name": "Java",
+        "levelPercentage": "20"
+      }
+    ],
+    "tools": [
+      {
+        "name": "Docker",
+        "levelPercentage": "50"
+      },
+      {
+        "name": "Git",
+        "levelPercentage": "80"
+      },
+      {
+        "name": "CI/CD",
+        "levelPercentage": "60"
+      }
+    ]
+  },
+  "contact": {
+    "label": "Contato & Redes Sociais",
+    "socialMedias": [
+      {
+        "name": "Website",
+        "link": "http://lucaslacerdacl.com.br/",
+        "icon": "https://cdn-icons-png.flaticon.com/512/3844/3844312.png"
+      },
+      {
+        "name": "Github",
+        "link": "https://github.com/lucaslacerdacl/",
+        "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+      },
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/lucaslacerdacl/",
+        "icon": "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+      },
+      {
+        "name": "Medium",
+        "link": "https://medium.com/@lucaslacerdacl",
+        "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968906.png"
+      },
+      {
+        "name": "Instagram",
+        "link": "https://instagram.com/lucaslacerdacl",
+        "icon": "https://cdn-icons-png.flaticon.com/512/174/174855.png"
+      }
+    ]
+  },
+  "communication": {
+    "label": "Idiomas",
+    "languages": [
+      {
+        "name": "Português",
+        "readingPercentage": "100",
+        "conversationPercentage": "100",
+        "writtingPercentage": "100"
+      },
+      {
+        "name": "Inglês",
+        "readingPercentage": "90",
+        "conversationPercentage": "50",
+        "writtingPercentage": "30"
+      }
+    ]
+    
+  },
+  "achivements": {
+    "label": "Conquistas",
+    "presentations": [
+      {
+        "name": "Apresentações semanais sobre Clean Code",
+        "host": "U4crypto",
+        "period": "2021-2022"
+      },
+      {
+        "name": "Palestra sobre responsabilidade e respeito com as pessoas",
+        "host": "Innovate",
+        "period": "2019"
+      },
+      {
+        "name": "Palestra sobre arquitetura em startups (DDD, TDD, BDD)",
+        "host": "Cotemig",
+        "period": "2018"
+      }
+    ],
+    "projects": [
+      {
+        "name": "VAI-TS",
+        "description": "CLI para criar boilerplates"
+      },
+      {
+        "name": "Resume",
+        "description": "API para rendereziar curriculo pdf"
+      },
+      {
+        "name": "CPM",
+        "description": "C++ Package Manager"
+      },
+      {
+        "name": "Deploy automatizado para web site",
+        "description": "CI/CD para Hostgator através do Travis"
+      },
+      {
+        "name": "Webcrawler para construção de database",
+        "description": "Software responsável por ler websites e coletar informações"
+      },
+      {
+        "name": "Angular Boilerplate",
+        "description": "Boilerplate na versão do Angular 7 pronto para projetos front-end"
       }
     ]
   }

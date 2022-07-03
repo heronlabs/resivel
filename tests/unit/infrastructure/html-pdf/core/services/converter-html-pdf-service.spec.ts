@@ -33,7 +33,7 @@ describe('Given converter html pdf service', () => {
 
       await service.fromHtmlToPdf(templateHtml);
 
-      expect(pageMock.pdf).toHaveBeenNthCalledWith(1);
+      expect(pageMock.pdf).toHaveBeenCalledTimes(1);
     });
   });
 });

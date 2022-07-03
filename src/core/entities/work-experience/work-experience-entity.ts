@@ -1,6 +1,6 @@
-import {JobEntity} from '../../job/job-entity';
+import {JobEntity} from './job-entity';
 
 export class WorkExperienceEntity {
-  title: string;
+  label: string;
   jobs: JobEntity[] = [];
 }

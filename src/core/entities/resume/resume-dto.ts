@@ -1,12 +1,13 @@
 export type ResumeDto = {
-  publicName: string;
-  description: string;
   profile: {
     label: string;
+    publicName: string;
+    picture: string;
     description: string;
+    introduction: string;
   };
   workExperience: {
-    title: string;
+    label: string;
     jobs: Array<{
       start: string;
       end: string;

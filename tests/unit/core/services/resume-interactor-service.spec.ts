@@ -15,11 +15,11 @@ describe('Given resume interactor service', () => {
   describe('Given pt br find method', () => {
     it('Should render resume by i18n file', () => {
       const resumeDtoMock = {
-        publicName: faker.name.firstName(),
-        description: faker.lorem.words(),
         profile: {
           label: faker.lorem.word(),
+          publicName: faker.name.firstName(),
           description: faker.lorem.words(),
+          introduction: faker.lorem.words(),
         },
         workExperience: {
           title: faker.lorem.word(),

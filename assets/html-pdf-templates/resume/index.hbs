@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cv</title>
+    <title>{{profile.publicName}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
     <style type="text/css">{{{ __style__ }}}</style>
   </head>
@@ -10,9 +10,48 @@
       <div class="row">
         <div class="col-md-4 section1">
           <div class="img">
-            <img src="image/logo.png">
+            <img src="{{{profile.picture}}}"  alt="profile-picture">
           </div>
+
           <div class="sect1-cont">
+            <div class=" skil-header">
+              <h2>{{skills.label}}</h2>
+              <div class="skill_cont">
+                {{#each skills.software}}
+                <p>{{this.name}}</p>
+                <div class="skill_container">
+                  <div class="skill html">
+                    <span>{{this.levelPercentage}}%</span>
+                  </div>
+                </div>
+                {{/each}}
+                {{#each skills.architecture}}
+                <p>{{this.name}}</p>
+                <div class="skill_container">
+                  <div class="skill html">
+                    <span>{{this.levelPercentage}}%</span>
+                  </div>
+                </div>
+                {{/each}}
+                {{#each skills.programmingLanguagens}}
+                <p>{{this.name}}</p>
+                <div class="skill_container">
+                  <div class="skill html">
+                    <span>{{this.levelPercentage}}%</span>
+                  </div>
+                </div>
+                {{/each}}
+                {{#each skills.tools}}
+                <p>{{this.name}}</p>
+                <div class="skill_container">
+                  <div class="skill html">
+                    <span>{{this.levelPercentage}}%</span>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
             <div class="education">
               <h2>Education</h2>
               <div class="edu_cont">
@@ -24,41 +63,6 @@
                 <span>2012-2014</span>
                 <h3>Your Degree Name</h3>
                 <p>College / Univeristy Name</p>
-              </div>
-            </div>
-            <div class=" skil-header">
-              <h2>My Skills</h2>
-              <div class="skill_cont">
-                <p>Skill Name</p>
-                <div class="skill_container">
-                  <div class="skill html">
-                    <span>80%</span>
-                  </div>
-                </div>
-                <p>Skill Name</p>
-                <div class="skill_container">
-                  <div class="skill php">
-                    <span>60%</span>
-                  </div>
-                </div>
-                <p>Skill Name</p>
-                <div class="skill_container">
-                  <div class="skill skill3">
-                    <span>50%</span>
-                  </div>
-                </div>
-                <p>Skill Name</p>
-                <div class="skill_container">
-                  <div class="skill skill4">
-                    <span>90%</span>
-                  </div>
-                </div>
-                <p>Skill Name</p>
-                <div class="skill_container">
-                  <div class="skill skill5">
-                    <span>70%</span>
-                  </div>
-                </div>
               </div>
             </div>
             <div class="contact">
@@ -85,47 +89,39 @@
         <div class="col-md-8 section2">
           <div class="heading">
             <div class="mainhead">
-              <h1>Your Name</h1>
-              <h4>Your Job Title</h4>
+              <h1>{{profile.publicName}}</h1>
+              <h4>{{profile.description}}</h4>
             </div>
           </div>
-          <!------------------- Skills -------------------- -->
           <div class="info">
             <div class="heading">
-              <h2>Profile</h2>
+              <h2>{{profile.label}}</h2>
             </div>
-            <!-- <ul class="info-ul"><li> -->
-            <p>IT consultent with strong theoretical skills and a passion for OpenSource software. <br>
-              <br> DevOps Engineer specialized in automation and in custom application development experienced with large projects and hetrogenius infastrucre. <br>
-              <br> Lorem ipsum dolor sit amet, consectetr adipisicing elit Lorem ipsum dolor sit amet, consectetr adipisicing elit
-            </p>
+            <p>{{{profile.introduction}}}</p>
           </div>
           <div class="exp">
             <div class="heading">
-              <h2>Experience</h2>
+              <h2>{{{workExperience.label}}}</h2>
             </div>
+            {{#each workExperience.jobs}}
             <div class="exp-cont">
               <div class="exp-year">
-                <span>2012-2016</span>
+                <span>{{this.start}} - {{this.end}}</span>
               </div>
               <div class="exp-detail">
-                <h3>DevOps Full stack Developer</h3>
-                <h6>Research and development</h6>
-                <p>Lorem ipsum dolor sit amet, consectetr adipisicing elit Lorem ipsum dolor sit amet, consectetr adipisicing elit</p>
+                <h3>{{this.companyName}} | {{this.title}}</h3>
+                <h6>{{this.description}}</h6>
+                {{#each this.achievements}}
+                <p>{{this.title}}</p>
                 <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
+                  {{#each this.descriptions}}
+                  <li>{{this}}</li>
+                  {{/each}}
                 </ul>
-                <b>Technolgies</b>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
-                  <li>Lorem ipsum dolor sit amet, consectetr adipisicing elit</li>
-                </ul>
+                {{/each}}
               </div>
             </div>
+            {{/each}}
           </div>
           <div class="reffrence">
             <div class="heading">
