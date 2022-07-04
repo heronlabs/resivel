@@ -143,9 +143,9 @@
       }
     ]
   },
-  "skills": {
-    "label": "Habilidades",
-    "software": [
+  "knowledge": {
+    "label": "Conhecimento",
+    "skillsPercentage": [
       {
         "name": "S.O.L.I.D.",
         "levelPercentage": "100"
@@ -165,9 +165,7 @@
       {
         "name": "Infraestrutura como código (IaC)",
         "levelPercentage": "60"
-      }
-    ],
-    "architecture": [
+      },
       {
         "name": "Arquitetura Nuvem",
         "levelPercentage": "100"
@@ -191,9 +189,7 @@
       {
         "name": "Command-Line Interface (CLI)",
         "levelPercentage": "70"
-      }
-    ],
-    "programmingLanguagens": [
+      },
       {
         "name": "Typescript",
         "levelPercentage": "100"
@@ -221,9 +217,7 @@
       {
         "name": "Java",
         "levelPercentage": "20"
-      }
-    ],
-    "tools": [
+      },
       {
         "name": "Docker",
         "levelPercentage": "50"

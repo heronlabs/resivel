@@ -12,11 +12,13 @@ export class PdfPresenter {
     ).toString();
 
     const cssViewFile = readFileSync(
-      `./assets/html-pdf-templates/${viewName}/index.css`
+      `./assets/html-pdf-templates/${viewName}/style.hbs`
     ).toString();
 
+    const style = HandlebarsFactory.compileTemplate(cssViewFile, payload);
+
     const payloadWithStyle = {
-      __style__: cssViewFile,
+      __style__: style,
       ...payload,
     };
 

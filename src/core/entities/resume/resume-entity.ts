@@ -1,3 +1,7 @@
+import {v4} from 'uuid';
+
+import {KnowledgeEntity} from '../knowledge/knowledge-entity';
+import {SkillPercentageEntity} from '../knowledge/skill-percentage-entity';
 import {ProfileEntity} from '../profile/profile-entity';
 import {AchievementEntity} from '../work-experience/achievement-entity';
 import {JobEntity} from '../work-experience/job-entity';
@@ -7,6 +11,7 @@ import {ResumeDto} from './resume-dto';
 export class ResumeEntity {
   profile: ProfileEntity;
   workExperience: WorkExperienceEntity;
+  knowledge: KnowledgeEntity;
 
   static make(resumeDto: ResumeDto): ResumeEntity {
     const resume = new ResumeEntity();
@@ -38,7 +43,18 @@ export class ResumeEntity {
     });
     resume.workExperience = workExperience;
 
-    // TODO: Criar skills
+    const knowledge = new KnowledgeEntity();
+    knowledge.label = resumeDto.knowledge.label;
+    knowledge.skillsPercentage = resumeDto.knowledge.skillsPercentage.map(
+      skillPercentageDto => {
+        const skillPercentage = new SkillPercentageEntity();
+        skillPercentage.id = `id-${v4()}`;
+        skillPercentage.name = skillPercentageDto.name;
+        skillPercentage.levelPercentage = skillPercentageDto.levelPercentage;
+        return skillPercentage;
+      }
+    );
+    resume.knowledge = knowledge;
 
     return resume;
   }

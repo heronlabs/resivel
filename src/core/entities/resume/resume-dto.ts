@@ -20,4 +20,12 @@ export type ResumeDto = {
       }>;
     }>;
   };
+  knowledge: {
+    label: string;
+    skillsPercentage: Array<{
+      id?: string;
+      name: string;
+      levelPercentage: string;
+    }>;
+  };
 };

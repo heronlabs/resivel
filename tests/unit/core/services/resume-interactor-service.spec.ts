@@ -1,6 +1,9 @@
 import faker from '@faker-js/faker';
 import * as fs from 'fs';
+import * as uuid from 'uuid';
+jest.mock('uuid');
 
+import {ResumeDto} from '../../../../src/core/entities/resume/resume-dto';
 import {ResumeEntity} from '../../../../src/core/entities/resume/resume-entity';
 import {ResumeInteractor} from '../../../../src/core/interfaces/resume-interactor';
 import {ResumeInteractorService} from '../../../../src/core/services/resume-interactor-service';
@@ -14,15 +17,19 @@ describe('Given resume interactor service', () => {
 
   describe('Given pt br find method', () => {
     it('Should render resume by i18n file', () => {
-      const resumeDtoMock = {
+      const fakeId = faker.datatype.uuid();
+      jest.spyOn(uuid, 'v4').mockImplementation(() => fakeId);
+
+      const resumeDtoMock: ResumeDto = {
         profile: {
           label: faker.lorem.word(),
           publicName: faker.name.firstName(),
+          picture: faker.internet.url(),
           description: faker.lorem.words(),
           introduction: faker.lorem.words(),
         },
         workExperience: {
-          title: faker.lorem.word(),
+          label: faker.lorem.word(),
           jobs: [
             {
               start: `${faker.date.month({abbr: true})} ${faker.datatype.number(
@@ -42,6 +49,16 @@ describe('Given resume interactor service', () => {
                   descriptions: [faker.lorem.words()],
                 },
               ],
+            },
+          ],
+        },
+        knowledge: {
+          label: faker.lorem.word(),
+          skillsPercentage: [
+            {
+              id: `id-${fakeId}`,
+              name: faker.lorem.word(),
+              levelPercentage: faker.datatype.number({max: 100}).toString(),
             },
           ],
         },

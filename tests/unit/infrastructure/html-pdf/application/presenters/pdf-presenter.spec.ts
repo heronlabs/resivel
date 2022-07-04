@@ -14,48 +14,69 @@ describe('Given pdf presenter', () => {
   });
 
   describe('Given an payload with view name containing style', () => {
-    it('Should return founded view with css and dynamic data inserted', async () => {
+    it('Should return view with dynamic data inserted', async () => {
       const payload = {
-        __style__: '.title { color: red };',
-        foo: faker.datatype.string(),
+        color: 'red',
+        foo: faker.lorem.word(),
       };
-      const viewName = faker.datatype.uuid();
+
+      const payloadWithStyle = {
+        __style__: `
+        <style type="text/css">
+          .title { color: ${payload.color} };
+        </style>
+        `,
+        ...payload,
+      };
+
+      const cssViewFile = `
+        <style type="text/css">.title { color: {{color}} };</style>
+      `;
 
       const htmlViewFile = `
-        <html>
-          <style type="text/css">{{ __style__ }}</style>
-          <body>
-            <div class="title">
-              {{ foo }}
-            </div>
-          </body>
-        </html>
-      `;
+      <html>
+        {{ __style__ }}
+        <body>
+          <div class="title">
+            {{ foo }}
+          </div>
+        </body>
+      </html>
+    `;
 
       jest
         .spyOn(fs, 'readFileSync')
         .mockReturnValueOnce(htmlViewFile)
-        .mockReturnValueOnce(payload.__style__);
+        .mockReturnValueOnce(cssViewFile);
 
-      const handlebarsSpyOn = jest.spyOn(HandlebarsFactory, 'compileTemplate')
-        .mockReturnValueOnce(`
-        <html>
-          <style>${payload.__style__}</style>
-          <body>
-            <div class="title">
-              ${payload.foo}
-            </div>
-          </body>
-        </html>
-      `);
+      const view = `
+      <html>
+        <style>${payloadWithStyle.__style__}</style>
+        <body>
+          <div class="title">
+            <h1>${payload.foo}</h1>
+          </div>
+        </body>
+      </html>
+    `;
+
+      const handlebarsSpyOn = jest
+        .spyOn(HandlebarsFactory, 'compileTemplate')
+        .mockReturnValueOnce(payloadWithStyle.__style__)
+        .mockReturnValueOnce(view);
 
       ConverterHtmlPdfMock.fromHtmlToPdf.mockResolvedValueOnce(
         new Mock<Buffer>().object()
       );
 
+      const viewName = faker.datatype.uuid();
       await presenter.envelope(payload, viewName);
 
-      expect(handlebarsSpyOn).toHaveBeenNthCalledWith(1, htmlViewFile, payload);
+      expect(handlebarsSpyOn).toHaveBeenNthCalledWith(
+        2,
+        htmlViewFile,
+        payloadWithStyle
+      );
     });
   });
 });

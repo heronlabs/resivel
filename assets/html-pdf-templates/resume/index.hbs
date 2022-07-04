@@ -3,7 +3,7 @@
   <head>
     <title>{{profile.publicName}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
-    <style type="text/css">{{{ __style__ }}}</style>
+    {{{ __style__ }}}
   </head>
   <body>
     <div class="container main">
@@ -15,36 +15,12 @@
 
           <div class="sect1-cont">
             <div class=" skil-header">
-              <h2>{{skills.label}}</h2>
+              <h2>{{knowledge.label}}</h2>
               <div class="skill_cont">
-                {{#each skills.software}}
-                <p>{{this.name}}</p>
+                {{#each knowledge.skillsPercentage}}
+                <p>{{{this.name}}}</p>
                 <div class="skill_container">
-                  <div class="skill html">
-                    <span>{{this.levelPercentage}}%</span>
-                  </div>
-                </div>
-                {{/each}}
-                {{#each skills.architecture}}
-                <p>{{this.name}}</p>
-                <div class="skill_container">
-                  <div class="skill html">
-                    <span>{{this.levelPercentage}}%</span>
-                  </div>
-                </div>
-                {{/each}}
-                {{#each skills.programmingLanguagens}}
-                <p>{{this.name}}</p>
-                <div class="skill_container">
-                  <div class="skill html">
-                    <span>{{this.levelPercentage}}%</span>
-                  </div>
-                </div>
-                {{/each}}
-                {{#each skills.tools}}
-                <p>{{this.name}}</p>
-                <div class="skill_container">
-                  <div class="skill html">
+                  <div class="skill {{this.id}}">
                     <span>{{this.levelPercentage}}%</span>
                   </div>
                 </div>
