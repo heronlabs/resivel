@@ -1,5 +1,7 @@
 import {v4} from 'uuid';
 
+import {ContactEntity} from '../contact/contact-entity';
+import {SocialMediasEntity} from '../contact/social-medias-entity';
 import {EducationEntity} from '../education/education-entity';
 import {InstitutionEntity} from '../education/institution-entity';
 import {KnowledgeEntity} from '../knowledge/knowledge-entity';
@@ -15,6 +17,7 @@ export class ResumeEntity {
   workExperience: WorkExperienceEntity;
   knowledge: KnowledgeEntity;
   education: EducationEntity;
+  contact: ContactEntity;
 
   static make(resumeDto: ResumeDto): ResumeEntity {
     const resume = new ResumeEntity();
@@ -71,6 +74,19 @@ export class ResumeEntity {
       }
     );
     resume.education = education;
+
+    const contact = new ContactEntity();
+    contact.label = resumeDto.contact.label;
+    contact.socialMedias = resumeDto.contact.socialMedias.map(
+      socialMediasDto => {
+        const socialMedias = new SocialMediasEntity();
+        socialMedias.name = socialMediasDto.name;
+        socialMedias.link = socialMediasDto.link;
+        socialMedias.icon = socialMediasDto.icon;
+        return socialMedias;
+      }
+    );
+    resume.contact = contact;
 
     return resume;
   }

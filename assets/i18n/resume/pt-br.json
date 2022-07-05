@@ -235,29 +235,29 @@
     "label": "Contato & Redes Sociais",
     "socialMedias": [
       {
-        "name": "Website",
+        "name": "lucaslacerdacl.com.br",
         "link": "http://lucaslacerdacl.com.br/",
-        "icon": "https://cdn-icons-png.flaticon.com/512/3844/3844312.png"
+        "icon": "https://img.icons8.com/stickers/452/share-2.png"
       },
       {
-        "name": "Github",
+        "name": "/lucaslacerdacl",
         "link": "https://github.com/lucaslacerdacl/",
-        "icon": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+        "icon": "https://img.icons8.com/stickers/452/github.png"
       },
       {
-        "name": "LinkedIn",
+        "name": "/in/lucaslacerdacl",
         "link": "https://www.linkedin.com/in/lucaslacerdacl/",
-        "icon": "https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg"
+        "icon": "https://img.icons8.com/stickers/452/linkedin.png"
       },
       {
-        "name": "Medium",
+        "name": "@lucaslacerdacl",
         "link": "https://medium.com/@lucaslacerdacl",
-        "icon": "https://cdn-icons-png.flaticon.com/512/5968/5968906.png"
+        "icon": "https://img.icons8.com/stickers/452/medium-logo.png"
       },
       {
-        "name": "Instagram",
+        "name": "@lucaslacerdacl",
         "link": "https://instagram.com/lucaslacerdacl",
-        "icon": "https://cdn-icons-png.flaticon.com/512/174/174855.png"
+        "icon": "https://img.icons8.com/stickers/452/instagram-new--v1.png"
       }
     ]
   },

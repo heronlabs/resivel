@@ -72,6 +72,16 @@ describe('Given resume interactor service', () => {
             },
           ],
         },
+        contact: {
+          label: faker.lorem.word(),
+          socialMedias: [
+            {
+              icon: faker.internet.url(),
+              link: faker.internet.url(),
+              name: faker.lorem.word(),
+            },
+          ],
+        },
       };
 
       jest

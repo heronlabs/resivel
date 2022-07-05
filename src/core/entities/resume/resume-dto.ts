@@ -36,4 +36,12 @@ export type ResumeDto = {
       duration: string;
     }>;
   };
+  contact: {
+    label: string;
+    socialMedias: Array<{
+      name: string;
+      link: string;
+      icon: string;
+    }>;
+  };
 };

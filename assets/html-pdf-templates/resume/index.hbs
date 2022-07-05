@@ -43,20 +43,14 @@
             </div>
 
             <div class="contact">
-              <h2>Contact</h2>
+              <h2>{{{contact.label}}}</h2>
               <ul class="social-ul">
+                {{#each contact.socialMedias}}
                 <li>
-                  <img src="image/address1.png" class="small-icon">
-                  <p>Xyx Street <br> AbC city </p>
+                  <img src="{{{this.icon}}}" class="small-icon">
+                  <p>{{{this.name}}}</p>
                 </li>
-                <li>
-                  <img src="image/ph1.png">
-                  <p>0317-6695897</p>
-                </li>
-                <li>
-                  <img src="image/mail.png">
-                  <p>www.youremail@server.com</p>
-                </li>
+                {{/each}}
               </ul>
             </div>
           </div>
