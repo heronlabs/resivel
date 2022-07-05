@@ -62,6 +62,16 @@ describe('Given resume interactor service', () => {
             },
           ],
         },
+        education: {
+          label: faker.lorem.word(),
+          institutions: [
+            {
+              name: faker.lorem.word(),
+              type: faker.lorem.word(),
+              duration: faker.lorem.word(),
+            },
+          ],
+        },
       };
 
       jest

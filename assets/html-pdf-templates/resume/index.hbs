@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{profile.publicName}}</title>
+    <title>{{{profile.publicName}}}</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,300;1,400&display=swap" rel="stylesheet">
     {{{ __style__ }}}
   </head>
@@ -15,39 +15,34 @@
 
           <div class="sect1-cont">
             <div class=" skil-header">
-              <h2>{{knowledge.label}}</h2>
+              <h2>{{{knowledge.label}}}</h2>
               <div class="skill_cont">
                 {{#each knowledge.skillsPercentage}}
                 <p>{{{this.name}}}</p>
                 <div class="skill_container">
                   <div class="skill {{this.id}}">
-                    <span>{{this.levelPercentage}}%</span>
+                    <span>{{{this.levelPercentage}}}%</span>
                   </div>
                 </div>
                 {{/each}}
               </div>
             </div>
-
+            <br /><br /><br /><br /><br /><br />
             <div class="education">
-              <h2>Education</h2>
+              <h2>{{{education.label}}}</h2>
+              {{#each education.institutions}}
               <div class="edu_cont">
-                <span>2012-2014</span>
-                <h3>Your Degree Name</h3>
-                <p>College / Univeristy Name</p>
+                <p>{{{this.name}}}</p>
+                <h3>{{{this.type}}}</h3>
+                <span>{{{this.duration}}}</span>
               </div>
-              <div class="edu_cont">
-                <span>2012-2014</span>
-                <h3>Your Degree Name</h3>
-                <p>College / Univeristy Name</p>
-              </div>
+              {{/each}}
             </div>
             <div class="contact">
               <h2>Contact</h2>
               <ul class="social-ul">
                 <li>
-                  <!-- <div class="social-img"> -->
                   <img src="image/address1.png" class="small-icon">
-                  <!-- </div> -->
                   <p>Xyx Street <br> AbC city </p>
                 </li>
                 <li>
@@ -65,13 +60,13 @@
         <div class="col-md-8 section2">
           <div class="heading">
             <div class="mainhead">
-              <h1>{{profile.publicName}}</h1>
-              <h4>{{profile.description}}</h4>
+              <h1>{{{profile.publicName}}}</h1>
+              <h4>{{{profile.description}}}</h4>
             </div>
           </div>
           <div class="info">
             <div class="heading">
-              <h2>{{profile.label}}</h2>
+              <h2>{{{profile.label}}}</h2>
             </div>
             <p>{{{profile.introduction}}}</p>
           </div>
@@ -82,16 +77,16 @@
             {{#each workExperience.jobs}}
             <div class="exp-cont">
               <div class="exp-year">
-                <span>{{this.start}} - {{this.end}}</span>
+                <span>{{{this.start}}} - {{{this.end}}}</span>
               </div>
               <div class="exp-detail">
-                <h3>{{this.companyName}} | {{this.title}}</h3>
-                <h6>{{this.description}}</h6>
+                <h3>{{{this.companyName}}} | {{{this.title}}}</h3>
+                <h6>{{{this.description}}}</h6>
                 {{#each this.achievements}}
-                <p>{{this.title}}</p>
+                <p>{{{this.title}}}</p>
                 <ul>
                   {{#each this.descriptions}}
-                  <li>{{this}}</li>
+                  <li>{{{this}}}</li>
                   {{/each}}
                 </ul>
                 {{/each}}

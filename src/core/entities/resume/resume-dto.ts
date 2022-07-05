@@ -28,4 +28,12 @@ export type ResumeDto = {
       levelPercentage: string;
     }>;
   };
+  education: {
+    label: string;
+    institutions: Array<{
+      name: string;
+      type: string;
+      duration: string;
+    }>;
+  };
 };

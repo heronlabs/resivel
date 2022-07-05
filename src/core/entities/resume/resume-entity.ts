@@ -1,5 +1,7 @@
 import {v4} from 'uuid';
 
+import {EducationEntity} from '../education/education-entity';
+import {InstitutionEntity} from '../education/institution-entity';
 import {KnowledgeEntity} from '../knowledge/knowledge-entity';
 import {SkillPercentageEntity} from '../knowledge/skill-percentage-entity';
 import {ProfileEntity} from '../profile/profile-entity';
@@ -12,6 +14,7 @@ export class ResumeEntity {
   profile: ProfileEntity;
   workExperience: WorkExperienceEntity;
   knowledge: KnowledgeEntity;
+  education: EducationEntity;
 
   static make(resumeDto: ResumeDto): ResumeEntity {
     const resume = new ResumeEntity();
@@ -55,6 +58,19 @@ export class ResumeEntity {
       }
     );
     resume.knowledge = knowledge;
+
+    const education = new EducationEntity();
+    education.label = resumeDto.education.label;
+    education.institutions = resumeDto.education.institutions.map(
+      institutionDto => {
+        const institution = new InstitutionEntity();
+        institution.duration = institutionDto.duration;
+        institution.type = institutionDto.type;
+        institution.name = institutionDto.name;
+        return institution;
+      }
+    );
+    resume.education = education;
 
     return resume;
   }

@@ -128,21 +128,6 @@
       }
     ]
   },
-  "education": {
-    "label": "Formação Acadêmica",
-    "institutions": [
-      {
-        "name": "São Paulo da Cruz",
-        "type": "Ensino médio",
-        "duration": "2013"
-      },
-      {
-        "name": "Universidade Federal de Minas Gerais (UFMG)",
-        "type": "Ensino superior incompleto",
-        "duration": "2015-2019"
-      }
-    ]
-  },
   "knowledge": {
     "label": "Conhecimento",
     "skillsPercentage": [
@@ -229,6 +214,21 @@
       {
         "name": "CI/CD",
         "levelPercentage": "60"
+      }
+    ]
+  },
+  "education": {
+    "label": "Formação Acadêmica",
+    "institutions": [
+      {
+        "name": "São Paulo da Cruz",
+        "type": "Ensino médio completo",
+        "duration": "2013"
+      },
+      {
+        "name": "Universidade Federal de Minas Gerais (UFMG)",
+        "type": "Engenharia de sistemas (incompleto)",
+        "duration": "2015-2019"
       }
     ]
   },
