@@ -4,7 +4,7 @@
     "publicName": "Lucas Lacerda",
     "description": "Arquiteto | Software",
     "picture": "https://s.gravatar.com/avatar/460ad6fc6315df853768239ce41643dc?s=600",
-    "introduction": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos, mas principalmente tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei.<br>Atualmente, todo esse aprendizado me permitiu entender melhor a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos,  eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem.<br>Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos.<br>Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas."
+    "introduction": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos e tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei. Atualmente, todo esse aprendizado me permitiu entender a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos, eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem.<br>Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos.<br>Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas."
   },
   "workExperience": {
     "label": "Experiência de trabalho",
@@ -17,11 +17,7 @@
         "companyName": "HeronLabs",
         "achievements": [
           {
-            "title": "Heron Labs é a minha empresa fundada em parceria com meu sócio Victor Amorim. Nosso foco é fornecer serviços e consultórias tecnologicas com qualidade.",
-            "descriptions": [
-              "Vai-TS",
-              "Resume"
-            ]
+            "title": "HeronLabs é uma empresa independente fundada em parceria com meu sócio Victor Amorim.<br />Nosso objetivo é ser referência para profissionais bem qualificados e prover serviços de qualidade para uma carteira sólida de clientes.<br />Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnologicas do mercado.<br />Também prestamos consultoria e buscamos divulgar conteúdo de forma pública para comunidade de desenvolvimento. Alguns projetos disponiveis:"
           }
         ]
       },
@@ -50,7 +46,7 @@
         "companyName": "Hotmart",
         "achievements": [
           {
-            "title": "Conheci a Hotmart através de eventos como DevDay e FrontInBh. Atuando como desenvolvedor front-end no squad da Hotmart Club, utilizamos React para construir nosso aplicativo e MobX para controle de estado. Integramos com as equipes de design e back-end para complementar as entregas. Além disso, participei de ações para melhoria contínua do código e aplicações de conceitos de arquitetura para entregar mais qualidade no longo prazo. Algumas realizações incluem:",
+            "title": "Conheci a Hotmart através de eventos como DevDay e FrontInBh.<br />Atuando como desenvolvedor front-end no squad da Hotmart Club, utilizamos React para construir nosso aplicativo e MobX para controle de estado. Integramos com as equipes de design e back-end para complementar as entregas. Além disso, participei de ações para melhoria contínua do código e aplicações de conceitos de arquitetura para entregar mais qualidade no longo prazo.<br />Algumas realizações incluem:",
             "descriptions": [
               "Desafio técnico em MeteorJs para Fire Festival.",
               "Palestra cultural sobre responsabilidade e respeito com as pessoas.",
@@ -69,7 +65,8 @@
           {
             "title": "Atuação como Scrum master guiando a equipe de acordo com as regras do produto.",
             "descriptions": [
-              "Utilizando a plataforma Azure Dev-Ops auxiliei a implementar pipelines para CI-CD em todos os produtos para entregas mais efetivas. Como front-end participei da criação de plug-ins nativos para Ionic 3.",
+              "Utilizando a plataforma Azure Dev-Ops auxiliei a implementar pipelines para CI-CD em todos os produtos para entregas mais efetivas.",
+              "Como front-end participei da criação de plug-ins nativos para Ionic 3.",
               "Em back-end atuei no desenvolvimento completo de funcionalidades em API Web (ASPNET CORE2) com integração em banco de dados relacionais (MySql) e não relacionais (MongoDB).",
               "Também realizava a manutenção e elaboração de novas funcionalidades em Microsserviços e participei ativamento do desenvolvimento e arquitetura do front-end para elaboração de portais em Angular 4+ com suporte para PWA."
             ]
@@ -84,10 +81,12 @@
         "companyName": "Teknisa",
         "achievements": [
           {
-            "title": "Criação do front-end em Angular com integração no back-end em PHP, ambos baseados no padrão MVC, para o desenvolvimento mobile.",
+            "title": "Criação do front-end em Angular com integração no back-end em PHP, ambos baseados no padrão MVC, para o desenvolvimento mobile.<br /> Algumas conquistas durante essa fase:",
             "descriptions": [
               "Elaboração de WebView em Android e Swift 3 com integração em diversas bibliotecas como por exemplo: Facebook, Google, Waze e CardIO.",
-              "Utilização de funções nativas no Android, como por exemplo: conexão bluetooth e acesso a impressora térmica. Desenvolvimento de arquitetura orientada a objetos para transações financeiras com implementação em Gateways de pagamento como por exemplo: MundiPagg, Software Express, Zoop e Cielo. Todo o projeto feito em PHP com o padrão PSR-4, implementação do design de orientação a objeto S.O.L.I.D e cobertura total de testes unitários."
+              "Utilização de funções nativas no Android, como por exemplo: conexão bluetooth e acesso a impressora térmica.",
+              "Desenvolvimento de arquitetura orientada a objetos para transações financeiras com implementação em Gateways de pagamento como por exemplo: MundiPagg, Software Express, Zoop e Cielo.",
+              "Novos projetos em PHP com o padrão PSR-4, implementação do design de orientação a objeto S.O.L.I.D e cobertura total de testes unitários."
             ]
           }
         ]

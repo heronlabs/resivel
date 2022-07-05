@@ -9,6 +9,7 @@
     <div class="container main">
       <div class="row">
         <div class="col-md-4 section1">
+
           <div class="img">
             <img src="{{{profile.picture}}}"  alt="profile-picture">
           </div>
@@ -27,7 +28,9 @@
                 {{/each}}
               </div>
             </div>
+
             <br /><br /><br /><br /><br /><br />
+
             <div class="education">
               <h2>{{{education.label}}}</h2>
               {{#each education.institutions}}
@@ -38,6 +41,7 @@
               </div>
               {{/each}}
             </div>
+
             <div class="contact">
               <h2>Contact</h2>
               <ul class="social-ul">
@@ -58,22 +62,28 @@
           </div>
         </div>
         <div class="col-md-8 section2">
+
           <div class="heading">
             <div class="mainhead">
               <h1>{{{profile.publicName}}}</h1>
               <h4>{{{profile.description}}}</h4>
             </div>
           </div>
+
           <div class="info">
             <div class="heading">
               <h2>{{{profile.label}}}</h2>
             </div>
             <p>{{{profile.introduction}}}</p>
           </div>
+
+          <br />
+
           <div class="exp">
             <div class="heading">
               <h2>{{{workExperience.label}}}</h2>
             </div>
+
             {{#each workExperience.jobs}}
             <div class="exp-cont">
               <div class="exp-year">
@@ -92,8 +102,10 @@
                 {{/each}}
               </div>
             </div>
+            <br />
             {{/each}}
           </div>
+
           <div class="reffrence">
             <div class="heading">
               <h2>Reference</h2>
