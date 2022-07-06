@@ -2,6 +2,7 @@ import {v4} from 'uuid';
 
 import {CommunicationEntity} from '../communication/communication-entity';
 import {LanguageEntity} from '../communication/language-entity';
+import {MetricEntity} from '../communication/metric-entity';
 import {ContactEntity} from '../contact/contact-entity';
 import {SocialMediaEntity} from '../contact/social-media-entity';
 import {EducationEntity} from '../education/education-entity';
@@ -121,11 +122,11 @@ export class ResumeEntity {
 
     const communication = new CommunicationEntity();
     communication.label = resumeDto.communication.label;
-    communication.metrics = {
-      reading: resumeDto.communication.metrics.reading,
-      conversation: resumeDto.communication.metrics.conversation,
-      writting: resumeDto.communication.metrics.writting,
-    };
+    const metrics = new MetricEntity();
+    metrics.reading = resumeDto.communication.metrics.reading;
+    metrics.conversation = resumeDto.communication.metrics.conversation;
+    metrics.writting = resumeDto.communication.metrics.writting;
+    communication.metrics = metrics;
     communication.languages = resumeDto.communication.languages.map(
       languageDto => {
         const language = new LanguageEntity();
