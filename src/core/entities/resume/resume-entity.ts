@@ -1,5 +1,7 @@
 import {v4} from 'uuid';
 
+import {CommunicationEntity} from '../communication/communication-entity';
+import {LanguageEntity} from '../communication/language-entity';
 import {ContactEntity} from '../contact/contact-entity';
 import {SocialMediaEntity} from '../contact/social-media-entity';
 import {EducationEntity} from '../education/education-entity';
@@ -24,6 +26,7 @@ export class ResumeEntity {
   contact: ContactEntity;
   presentation: PresentationEntity;
   openSource: OpenSourceEntity;
+  communication: CommunicationEntity;
 
   static make(resumeDto: ResumeDto): ResumeEntity {
     const resume = new ResumeEntity();
@@ -115,6 +118,28 @@ export class ResumeEntity {
       return project;
     });
     resume.openSource = openSource;
+
+    const communication = new CommunicationEntity();
+    communication.label = resumeDto.communication.label;
+    communication.metrics = {
+      reading: resumeDto.communication.metrics.reading,
+      conversation: resumeDto.communication.metrics.conversation,
+      writting: resumeDto.communication.metrics.writting,
+    };
+    communication.languages = resumeDto.communication.languages.map(
+      languageDto => {
+        const language = new LanguageEntity();
+        language.name = languageDto.name;
+        language.readingPercentageId = `id-${v4()}`;
+        language.readingPercentage = languageDto.readingPercentage;
+        language.conversationPercentageId = `id-${v4()}`;
+        language.conversationPercentage = languageDto.conversationPercentage;
+        language.writtingPercentageId = `id-${v4()}`;
+        language.writtingPercentage = languageDto.writtingPercentage;
+        return language;
+      }
+    );
+    resume.communication = communication;
 
     return resume;
   }

@@ -102,6 +102,25 @@ describe('Given resume interactor service', () => {
             },
           ],
         },
+        communication: {
+          label: faker.lorem.word(),
+          metrics: {
+            reading: faker.lorem.word(),
+            conversation: faker.lorem.word(),
+            writting: faker.lorem.word(),
+          },
+          languages: [
+            {
+              name: faker.lorem.word(),
+              readingPercentageId: `id-${fakeId}`,
+              readingPercentage: faker.lorem.word(),
+              conversationPercentageId: `id-${fakeId}`,
+              conversationPercentage: faker.lorem.word(),
+              writtingPercentageId: `id-${fakeId}`,
+              writtingPercentage: faker.lorem.word(),
+            },
+          ],
+        },
       };
 
       jest

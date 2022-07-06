@@ -318,6 +318,11 @@
   },
   "communication": {
     "label": "Idiomas",
+    "metrics": {
+      "reading": "Leitura",
+      "conversation": "Conversação",
+      "writting": "Escrita"
+    },
     "languages": [
       {
         "name": "Português",

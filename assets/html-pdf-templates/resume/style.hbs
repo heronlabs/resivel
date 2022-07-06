@@ -138,6 +138,18 @@ body {
   width: {{this.levelPercentage}}%;
 }
 {{/each}}
+
+{{#each communication.languages}}
+.{{this.readingPercentageId}} {
+  width: {{this.readingPercentage}}%;
+}
+.{{this.conversationPercentageId}} {
+  width: {{this.conversationPercentage}}%;
+}
+.{{this.writtingPercentageId}} {
+  width: {{this.writtingPercentage}}%;
+}
+{{/each}}
 .section1 .sect1-cont ul li{
   list-style: none;
   text-decoration: none;

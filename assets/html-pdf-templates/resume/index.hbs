@@ -42,6 +42,37 @@
               {{/each}}
             </div>
 
+            <br />
+
+            <div class=" skil-header">
+              <h2>{{{communication.label}}}</h2>
+              <div class="skill_cont">
+                {{#each communication.languages}}
+                <p>{{{this.name}}}</p>
+                <p>{{{../communication.metrics.reading}}}</p>
+                <div class="skill_container">
+                  <div class="skill {{this.readingPercentageId}}">
+                    <span>{{{this.readingPercentage}}}%</span>
+                  </div>
+                </div>
+                <p>{{{../communication.metrics.conversation}}}</p>
+                <div class="skill_container">
+                  <div class="skill {{this.conversationPercentageId}}">
+                    <span>{{{this.conversationPercentage}}}%</span>
+                  </div>
+                </div>
+                <p>{{{../communication.metrics.writting}}}</p>
+                <div class="skill_container">
+                  <div class="skill {{this.writtingPercentageId}}">
+                    <span>{{{this.writtingPercentage}}}%</span>
+                  </div>
+                </div>
+                {{/each}}
+              </div>
+            </div>
+
+            <br />
+
             <div class="contact">
               <h2>{{{contact.label}}}</h2>
               <ul class="social-ul">

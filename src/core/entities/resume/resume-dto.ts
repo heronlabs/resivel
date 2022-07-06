@@ -62,6 +62,11 @@ export type ResumeDto = {
   };
   communication: {
     label: string;
+    metrics: {
+      reading: string;
+      conversation: string;
+      writting: string;
+    };
     languages: Array<{
       name: string;
       readingPercentageId?: string;
