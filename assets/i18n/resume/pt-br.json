@@ -261,6 +261,61 @@
       }
     ]
   },
+  "presentation": {
+    "label": "Palestras",
+    "topics": [
+      {
+        "name": "Palestras semanais sobre Clean Code",
+        "host": "U4crypto",
+        "period": "2021-2022"
+      },
+      {
+        "name": "Palestra sobre responsabilidade e respeito com as pessoas",
+        "host": "Innovate",
+        "period": "2019"
+      },
+      {
+        "name": "Palestra sobre arquitetura em startups (DDD, TDD, BDD)",
+        "host": "Cotemig",
+        "period": "2018"
+      }
+    ]
+  },
+  "openSource": {
+    "label": "Comunidade aberta",
+    "projects": [
+      {
+        "name": "VAI-TS",
+        "description": "CLI para criar boilerplates",
+        "holder": "Github - HeronLabs"
+      },
+      {
+        "name": "Resivel",
+        "description": "API para rendereziar curriculo pdf",
+        "holder": "Github - HeronLabs"
+      },
+      {
+        "name": "CPM",
+        "description": "C++ Package Manager",
+        "holder": "Github - lucaslacerdacl"
+      },
+      {
+        "name": "Deploy automatizado para web site",
+        "description": "CI/CD para Hostgator através do Travis",
+        "holder": "Github - lucaslacerdacl"
+      },
+      {
+        "name": "Webcrawler para construção de database",
+        "description": "Software responsável por ler websites e coletar informações",
+        "holder": "Github - lucaslacerdacl"
+      },
+      {
+        "name": "Angular Boilerplate",
+        "description": "Boilerplate na versão do Angular 7 pronto para projetos front-end",
+        "holder": "Github - lucaslacerdacl"
+      }
+    ]
+  },
   "communication": {
     "label": "Idiomas",
     "languages": [
@@ -278,51 +333,5 @@
       }
     ]
     
-  },
-  "achivements": {
-    "label": "Conquistas",
-    "presentations": [
-      {
-        "name": "Apresentações semanais sobre Clean Code",
-        "host": "U4crypto",
-        "period": "2021-2022"
-      },
-      {
-        "name": "Palestra sobre responsabilidade e respeito com as pessoas",
-        "host": "Innovate",
-        "period": "2019"
-      },
-      {
-        "name": "Palestra sobre arquitetura em startups (DDD, TDD, BDD)",
-        "host": "Cotemig",
-        "period": "2018"
-      }
-    ],
-    "projects": [
-      {
-        "name": "VAI-TS",
-        "description": "CLI para criar boilerplates"
-      },
-      {
-        "name": "Resume",
-        "description": "API para rendereziar curriculo pdf"
-      },
-      {
-        "name": "CPM",
-        "description": "C++ Package Manager"
-      },
-      {
-        "name": "Deploy automatizado para web site",
-        "description": "CI/CD para Hostgator através do Travis"
-      },
-      {
-        "name": "Webcrawler para construção de database",
-        "description": "Software responsável por ler websites e coletar informações"
-      },
-      {
-        "name": "Angular Boilerplate",
-        "description": "Boilerplate na versão do Angular 7 pronto para projetos front-end"
-      }
-    ]
   }
 }

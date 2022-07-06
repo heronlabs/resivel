@@ -1,11 +1,15 @@
 import {v4} from 'uuid';
 
 import {ContactEntity} from '../contact/contact-entity';
-import {SocialMediasEntity} from '../contact/social-medias-entity';
+import {SocialMediaEntity} from '../contact/social-media-entity';
 import {EducationEntity} from '../education/education-entity';
 import {InstitutionEntity} from '../education/institution-entity';
 import {KnowledgeEntity} from '../knowledge/knowledge-entity';
 import {SkillPercentageEntity} from '../knowledge/skill-percentage-entity';
+import {OpenSourceEntity} from '../open-source/open-source-entity';
+import {ProjectEntity} from '../open-source/project-entity';
+import {PresentationEntity} from '../presentation/presentation-entity';
+import {TopicEntity} from '../presentation/topic-entity';
 import {ProfileEntity} from '../profile/profile-entity';
 import {AchievementEntity} from '../work-experience/achievement-entity';
 import {JobEntity} from '../work-experience/job-entity';
@@ -18,6 +22,8 @@ export class ResumeEntity {
   knowledge: KnowledgeEntity;
   education: EducationEntity;
   contact: ContactEntity;
+  presentation: PresentationEntity;
+  openSource: OpenSourceEntity;
 
   static make(resumeDto: ResumeDto): ResumeEntity {
     const resume = new ResumeEntity();
@@ -79,7 +85,7 @@ export class ResumeEntity {
     contact.label = resumeDto.contact.label;
     contact.socialMedias = resumeDto.contact.socialMedias.map(
       socialMediasDto => {
-        const socialMedias = new SocialMediasEntity();
+        const socialMedias = new SocialMediaEntity();
         socialMedias.name = socialMediasDto.name;
         socialMedias.link = socialMediasDto.link;
         socialMedias.icon = socialMediasDto.icon;
@@ -87,6 +93,28 @@ export class ResumeEntity {
       }
     );
     resume.contact = contact;
+
+    const presentation = new PresentationEntity();
+    presentation.label = resumeDto.presentation.label;
+    presentation.topics = resumeDto.presentation.topics.map(topicDto => {
+      const topic = new TopicEntity();
+      topic.name = topicDto.name;
+      topic.host = topicDto.host;
+      topic.period = topicDto.period;
+      return topic;
+    });
+    resume.presentation = presentation;
+
+    const openSource = new OpenSourceEntity();
+    openSource.label = resumeDto.openSource.label;
+    openSource.projects = resumeDto.openSource.projects.map(projectDto => {
+      const project = new ProjectEntity();
+      project.name = projectDto.name;
+      project.description = projectDto.description;
+      project.holder = projectDto.holder;
+      return project;
+    });
+    resume.openSource = openSource;
 
     return resume;
   }

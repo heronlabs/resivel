@@ -82,6 +82,26 @@ describe('Given resume interactor service', () => {
             },
           ],
         },
+        openSource: {
+          label: faker.lorem.word(),
+          projects: [
+            {
+              name: faker.lorem.word(),
+              description: faker.lorem.word(),
+              holder: faker.lorem.word(),
+            },
+          ],
+        },
+        presentation: {
+          label: faker.lorem.word(),
+          topics: [
+            {
+              name: faker.lorem.word(),
+              host: faker.lorem.word(),
+              period: faker.lorem.word(),
+            },
+          ],
+        },
       };
 
       jest

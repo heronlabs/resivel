@@ -44,4 +44,32 @@ export type ResumeDto = {
       icon: string;
     }>;
   };
+  openSource: {
+    label: string;
+    projects: Array<{
+      name: string;
+      description: string;
+      holder: string;
+    }>;
+  };
+  presentation: {
+    label: string;
+    topics: Array<{
+      name: string;
+      host: string;
+      period: string;
+    }>;
+  };
+  communication: {
+    label: string;
+    languages: Array<{
+      name: string;
+      readingPercentageId?: string;
+      readingPercentage: string;
+      conversationPercentageId?: string;
+      conversationPercentage: string;
+      writtingPercentageId?: string;
+      writtingPercentage: string;
+    }>;
+  };
 };

@@ -1,6 +1,6 @@
-import {SocialMediasEntity} from './social-medias-entity';
+import {SocialMediaEntity} from './social-media-entity';
 
 export class ContactEntity {
   label: string;
-  socialMedias: SocialMediasEntity[] = [];
+  socialMedias: SocialMediaEntity[] = [];
 }

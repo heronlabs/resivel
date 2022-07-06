@@ -102,32 +102,26 @@
 
           <div class="reffrence">
             <div class="heading">
-              <h2>Reference</h2>
+              <h2>{{{presentation.label}}}</h2>
             </div>
+            {{#each presentation.topics}}
             <div class="ref_cont">
-              <b>Reference Name</b>
-              <h4>Job Title</h4>
-              <span>Company Name</span>
-              <p>+923043554353</p>
+              <b>{{{this.name}}}</b>
+              <h4>{{{this.host}}} - {{{this.period}}}</h4>
             </div>
+            {{/each}}
+          </div>
+
+          <div class="reffrence">
+            <div class="heading">
+              <h2>{{{openSource.label}}}</h2>
+            </div>
+            {{#each openSource.projects}}
             <div class="ref_cont">
-              <b>Reference Name</b>
-              <h4>Job Title</h4>
-              <span>Company Name</span>
-              <p>+923043554353</p>
+              <b>{{{this.name}}}</b>
+              <h4>{{{this.description}}} - {{{this.holder}}}</h4>
             </div>
-            <div class="ref_cont">
-              <b>Reference Name</b>
-              <h4>Job Title</h4>
-              <span>Company Name</span>
-              <p>+923043554353</p>
-            </div>
-            <div class="ref_cont">
-              <b>Reference Name</b>
-              <h4>Job Title</h4>
-              <span>Company Name</span>
-              <p>+923043554353</p>
-            </div>
+            {{/each}}
           </div>
         </div>
       </div>
