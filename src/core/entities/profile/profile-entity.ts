@@ -4,4 +4,5 @@ export class ProfileEntity {
   description: string;
   picture: string;
   introduction: string;
+  qrcode: string;
 }

@@ -5,6 +5,7 @@ export type ResumeDto = {
     picture: string;
     description: string;
     introduction: string;
+    qrcode: string;
   };
   workExperience: {
     label: string;

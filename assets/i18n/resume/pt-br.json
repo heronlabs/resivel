@@ -4,7 +4,8 @@
     "publicName": "Lucas Lacerda",
     "description": "Arquiteto | Software",
     "picture": "https://s.gravatar.com/avatar/460ad6fc6315df853768239ce41643dc?s=600",
-    "introduction": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos e tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei. Atualmente, todo esse aprendizado me permitiu entender a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos, eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem.<br>Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos.<br>Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas."
+    "introduction": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos e tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei. Atualmente, todo esse aprendizado me permitiu entender a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos, eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem.<br>Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos.<br>Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas.",
+    "qrcode": "./assets/images/resume/qrcode.png"
   },
   "workExperience": {
     "label": "Experiência de trabalho",
@@ -237,32 +238,32 @@
       {
         "name": "lucaslacerdacl.com.br",
         "link": "http://lucaslacerdacl.com.br/",
-        "icon": "https://drive.google.com/uc?export=view&id=1hYRKcqZWHGRtaMFKmwNhbLw93jdM140w"
+        "icon": "./assets/images/resume/social-media/stick-icon-web.png"
       },
       {
         "name": "/lucaslacerdacl",
         "link": "https://github.com/lucaslacerdacl/",
-        "icon": "https://drive.google.com/uc?export=view&id=1gt-YZdekGcayHMKGu8LDV3M5FVVRLWw3"
+        "icon": "./assets/images/resume/social-media/stick-icon-github.png"
       },
       {
         "name": "/in/lucaslacerdacl",
         "link": "https://www.linkedin.com/in/lucaslacerdacl/",
-        "icon": "https://drive.google.com/uc?export=view&id=1DeL9yN8HrGIpaNjXNCO_rg3K4-GfoJTq"
+        "icon": "./assets/images/resume/social-media/stick-icon-linkedin.png"
       },
       {
         "name": "@lucaslacerdacl",
         "link": "https://medium.com/@lucaslacerdacl",
-        "icon": "https://drive.google.com/uc?export=view&id=19AAw6FoSEA6AkbumG3x-TsDFnYXwQjYJ"
+        "icon": "./assets/images/resume/social-media/stick-icon-medium.png"
       },
       {
         "name": "LucasLacerdaCL#3289",
         "link": "discordapp.com/users/LucasLacerdaCL#3289",
-        "icon": "https://drive.google.com/uc?export=view&id=1kBuK9AeReoloJEveiOJK8s-KqY3BaisR"
+        "icon": "./assets/images/resume/social-media/stick-icon-discord.png"
       },
       {
         "name": "@lucaslacerdacl",
         "link": "https://instagram.com/lucaslacerdacl",
-        "icon": "https://drive.google.com/uc?export=view&id=1lBGtZguig6EXyzPjbaThihkSh4btSrMv"
+        "icon": "./assets/images/resume/social-media/stick-icon-instagram.png"
       }
     ]
   },

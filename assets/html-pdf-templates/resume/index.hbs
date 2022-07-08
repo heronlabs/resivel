@@ -29,7 +29,11 @@
               </div>
             </div>
 
-            <br /><br /><br /><br /><br /><br />
+            <div class="qrcode">
+              <img src="data:image/png;base64,{{{profile.qrcode}}}"  alt="profile-qrcode">
+            </div>
+
+            <br />
 
             <div class="education">
               <h2>{{{education.label}}}</h2>
@@ -78,7 +82,7 @@
               <ul class="social-ul">
                 {{#each contact.socialMedias}}
                 <li>
-                  <img src="{{{this.icon}}}" class="small-icon">
+                  <img src="data:image/png;base64,{{{this.icon}}}" class="small-icon">
                   <p>{{{this.name}}}</p>
                 </li>
                 {{/each}}

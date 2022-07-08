@@ -19,6 +19,8 @@ describe('Given resume interactor service', () => {
     it('Should render resume by i18n file', () => {
       const fakeId = faker.datatype.uuid();
       jest.spyOn(uuid, 'v4').mockImplementation(() => fakeId);
+      const fileStringBase64 = faker.datatype.string();
+      jest.spyOn(fs, 'readFileSync').mockImplementation(() => fileStringBase64);
 
       const resumeDtoMock: ResumeDto = {
         profile: {
@@ -27,6 +29,7 @@ describe('Given resume interactor service', () => {
           picture: faker.internet.url(),
           description: faker.lorem.words(),
           introduction: faker.lorem.words(),
+          qrcode: fileStringBase64,
         },
         workExperience: {
           label: faker.lorem.word(),
@@ -76,7 +79,7 @@ describe('Given resume interactor service', () => {
           label: faker.lorem.word(),
           socialMedias: [
             {
-              icon: faker.internet.url(),
+              icon: fileStringBase64,
               link: faker.internet.url(),
               name: faker.lorem.word(),
             },

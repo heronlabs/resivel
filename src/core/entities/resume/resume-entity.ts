@@ -1,3 +1,4 @@
+import {readFileSync} from 'fs';
 import {v4} from 'uuid';
 
 import {CommunicationEntity} from '../communication/communication-entity';
@@ -38,6 +39,7 @@ export class ResumeEntity {
     profile.picture = resumeDto.profile.picture;
     profile.description = resumeDto.profile.description;
     profile.introduction = resumeDto.profile.introduction;
+    profile.qrcode = readFileSync(resumeDto.profile.qrcode).toString('base64');
     resume.profile = profile;
 
     const workExperience = new WorkExperienceEntity();
@@ -92,7 +94,9 @@ export class ResumeEntity {
         const socialMedias = new SocialMediaEntity();
         socialMedias.name = socialMediasDto.name;
         socialMedias.link = socialMediasDto.link;
-        socialMedias.icon = socialMediasDto.icon;
+        socialMedias.icon = readFileSync(socialMediasDto.icon).toString(
+          'base64'
+        );
         return socialMedias;
       }
     );
