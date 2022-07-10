@@ -19,9 +19,6 @@ export class ConverterHtmlPdfService implements ConverterHtmlPdf {
 
   async fromHtmlToPdf(html: string): Promise<Buffer> {
     const browser = await this.puppeteer.launch({
-      // headless: false,
-      // defaultViewport: null,
-      // timeout: 100000,
       args: ['--no-sandbox'],
     });
 

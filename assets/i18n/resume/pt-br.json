@@ -18,7 +18,7 @@
         "companyName": "HeronLabs",
         "achievements": [
           {
-            "title": "HeronLabs é uma empresa independente fundada em parceria com o sócio Victor Amorim.<br>Objetivamos alcançar um patamar de referência como profissionais qualificados que trabalham provendo serviços eficientes para uma carteira sólida de clientes.<br>Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnológicas do mercado.<br>Também prestamos consultoria e buscamos divulgar conteúdo profissional para a comunidade de desenvolvimento. Alguns projetos disponiveis:"
+            "title": "HeronLabs é uma empresa independente fundada em parceria com o sócio Victor Amorim. Objetivamos alcançar um patamar de referência como profissionais qualificados que trabalham provendo serviços eficientes para uma carteira sólida de clientes. Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnológicas do mercado. Também prestamos consultoria e buscamos divulgar conteúdo profissional para a comunidade de desenvolvimento."
           }
         ]
       },
@@ -26,7 +26,7 @@
         "start": "Fev 20",
         "end": "Atualmente",
         "title": "Arquiteto",
-        "description": "Artesão de Software e Comunity Manager",
+        "description": "Arquiteto de Software",
         "companyName": "U4crypto",
         "achievements": [
           {
@@ -44,7 +44,7 @@
         "end": "Out 19",
         "title": "Engenheiro Front-end",
         "description": "Desenvolvedor React no squad Hotmart Club",
-        "companyName": "Hotmart",
+        "companyName": "<br>Hotmart",
         "achievements": [
           {
             "title": "Conheci a Hotmart através de eventos como DevDay e FrontInBh.<br />Atuando como desenvolvedor front-end no squad da Hotmart Club, utilizamos React para construir nosso aplicativo e MobX para controle de estado. Integramos com as equipes de design e back-end para complementar as entregas. Além disso, participei de ações para melhoria contínua do código e aplicações de conceitos de arquitetura para entregar mais qualidade no longo prazo.<br />Algumas realizações incluem:",
@@ -97,7 +97,7 @@
         "end": "Jul 15",
         "title": "Desenvolvedor Júnior",
         "description": "Suporte e manutenção",
-        "companyName": "Akmos",
+        "companyName": "<br><br><br><br>Akmos",
         "achievements": [
           {
             "title": "Principais atividades:",

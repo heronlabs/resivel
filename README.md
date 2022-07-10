@@ -1,4 +1,6 @@
-# Resume
+<img src="https://cdn.discordapp.com/attachments/995800020760657970/995800123776966666/Frame_1.png" alt="drawing" width="150"/>
+
+# Resivel
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -10,6 +12,7 @@
 [![GTS](https://img.shields.io/badge/GTS-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://github.com/google/gts)
 [![Jest](https://img.shields.io/badge/-jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)](https://github.com/facebook/jest)
 [![NestJS](https://img.shields.io/badge/nestjs-%23E0234E.svg?style=for-the-badge&logo=nestjs&logoColor=white)](https://docs.nestjs.com/)
+[![Discord](https://img.shields.io/badge/%3CForum%3E-%237289DA.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/Z88XazKjau)
 
 ## TLTR (Too long to read)
 
@@ -30,9 +33,7 @@ A route will return the curriculum already in pdf format, given an assets folder
 
 ## Next steps
 
-The base html/css template is still being generated along with the rest of the curriculum information.
-
-Furthermore, the images must be read along with the i18n file and populated in the corresponding entity. In the future, this storage process can be done by a database.
+In the future, this storage process can be done by a database.
 
 It is also important to reinforce that the html-pdf project in the infrastructure will be migrated to a separate repository and it will be possible to configure the assets folder for the html templates.
 
