@@ -18,7 +18,7 @@
         "companyName": "HeronLabs",
         "achievements": [
           {
-            "title": "HeronLabs é uma empresa independente fundada em parceria com o sócio Victor Amorim. Objetivamos alcançar um patamar de referência como profissionais qualificados que trabalham provendo serviços eficientes para uma carteira sólida de clientes. Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnológicas do mercado. Também prestamos consultoria e buscamos divulgar conteúdo profissional para a comunidade de desenvolvimento."
+            "title": "HeronLabs é uma empresa independente fundada em parceria com o sócio Victor Amorim. Objetivamos alcançar um patamar de referência como profissionais qualificados que trabalham provendo serviços eficientes para uma carteira sólida de clientes. Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnológicas do mercado."
           }
         ]
       },
@@ -34,7 +34,7 @@
             "descriptions": [
               "Arquitetura Limpa e Código Limpo (Martin C. Robert).",
               "Desenvolvimento Orientado a Testes (Kent Beck) e Refatoração (Martin Fowler).",
-              "Desing Orientado a Domínio (Eric Evans)."
+              "Desing Orientado a Domínio (Eric Evans).<br><br><br><br>"
             ]
           }
         ]
@@ -44,7 +44,7 @@
         "end": "Out 19",
         "title": "Engenheiro Front-end",
         "description": "Desenvolvedor React no squad Hotmart Club",
-        "companyName": "<br>Hotmart",
+        "companyName": "Hotmart",
         "achievements": [
           {
             "title": "Conheci a Hotmart através de eventos como DevDay e FrontInBh.<br />Atuando como desenvolvedor front-end no squad da Hotmart Club, utilizamos React para construir nosso aplicativo e MobX para controle de estado. Integramos com as equipes de design e back-end para complementar as entregas. Além disso, participei de ações para melhoria contínua do código e aplicações de conceitos de arquitetura para entregar mais qualidade no longo prazo.<br />Algumas realizações incluem:",
@@ -64,12 +64,12 @@
         "companyName": "Meep",
         "achievements": [
           {
-            "title": "Atuação como Scrum master guiando a equipe de acordo com as regras do produto.",
+            "title": "Atuação como Scrum master guiando a equipe de acordo com as regras do produto. Alguns trabalhos entregues:",
             "descriptions": [
               "Utilizando a plataforma Azure Dev-Ops auxiliei a implementar pipelines para CI-CD em todos os produtos para entregas mais efetivas.",
               "Como front-end participei da criação de plug-ins nativos para Ionic 3.",
               "Em back-end atuei no desenvolvimento completo de funcionalidades em API Web (ASPNET CORE2) com integração em banco de dados relacionais (MySql) e não relacionais (MongoDB).",
-              "Também realizava a manutenção e elaboração de novas funcionalidades em Microsserviços e participei ativamento do desenvolvimento e arquitetura do front-end para elaboração de portais em Angular 4+ com suporte para PWA."
+              "Também realizava a manutenção e elaboração de novas funcionalidades em Microsserviços e participei ativamente do desenvolvimento e arquitetura do front-end para elaboração de portais em Angular 4+ com suporte para PWA."
             ]
           }
         ]
@@ -87,7 +87,7 @@
               "Elaboração de WebView em Android e Swift 3 com integração em diversas bibliotecas como por exemplo: Facebook, Google, Waze e CardIO.",
               "Utilização de funções nativas no Android, como por exemplo: conexão bluetooth e acesso a impressora térmica.",
               "Desenvolvimento de arquitetura orientada a objetos para transações financeiras com implementação em Gateways de pagamento como por exemplo: MundiPagg, Software Express, Zoop e Cielo.",
-              "Novos projetos em PHP com o padrão PSR-4, implementação do design de orientação a objeto S.O.L.I.D e cobertura total de testes unitários."
+              "Novos projetos em PHP com o padrão PSR-4, implementação do design de orientação a objeto S.O.L.I.D e cobertura total de testes unitários.<br><br><br><br><br><br>"
             ]
           }
         ]
@@ -97,7 +97,7 @@
         "end": "Jul 15",
         "title": "Desenvolvedor Júnior",
         "description": "Suporte e manutenção",
-        "companyName": "<br><br><br><br>Akmos",
+        "companyName": "Akmos",
         "achievements": [
           {
             "title": "Principais atividades:",
