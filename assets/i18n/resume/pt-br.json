@@ -4,21 +4,21 @@
     "publicName": "Lucas Lacerda",
     "description": "Arquiteto | Software",
     "picture": "https://s.gravatar.com/avatar/460ad6fc6315df853768239ce41643dc?s=600",
-    "introduction": "Há mais de uma decada tenho me dedicado ao desenvolvimento de software. Ao longo desse tempo, passei por diversos setores e processos e tive a oportunidade de conhecer excelentes profissionais em todos os lugares que passei. Atualmente, todo esse aprendizado me permitiu entender a importância individual de cada uma das pessoas e os problemas que elas estão enfrentando. Em um quebra-cabeça começamos a resolver a imagem pelos cantos, eu procurei entender as limitações ténicas da área de desenvolvimento primeiro. Só então, eu pude dar um passo atrás para começar a construir minha própria imagem.<br>Nessa imagem, pessoas, setores e processos se encaixam de modo harmonico onde bom ou ruim são apenas perspectivas a serem exploradas. Através do conhecimento podemos estabelecer a comunicação entre contextos diferentes, e então de maneira coletiva propor ideias que façam sentido para todos.<br>Contudo, o status de arquiteto pode dizer mais do que de fato entrega, é importante deixar claro que minha missão é apresentar ideias que possam ser embasadas técnicamente e validadas empiricamente, de modo que as pessoas possam pensar por si próprias e propor soluções adequadas.",
+    "introduction": "Há mais de uma década me dedico ao desenvolvimento de software. Ao longo desse tempo passei por diversos setores e processos, o que me trouxe oportunidade de conhecer excelentes profissionais em vários lugares. Esse contato me permitiu entender a importância de cada uma das pessoas e os problemas nos quais elas se engajam para produzir soluções. De forma semelhante ao processo de montagem em um quebra-cabeça, iniciei minhas atividades em tarefas periféricas, procurando entender primordialmente as limitações técnicas da área de desenvolvimento.<br>Foi então que percebi a importância da formação e aperfeiçoamento do meu perfil profissional também como um articulador de idéias assertivo, que propicia comunicação efetiva e harmônica junto de pessoas, setores e processos conforme as exigências dos projetos e tarefas em questão. Através do conhecimento consegui estabelecer diálogos entre diferentes contextos sempre propondo construções coletivas, que se tornam mais acuradas porque fazem sentido para todos os envolvidos.<br>A posição do arquiteto de software pode dizer mais do que de fato entrega. Claro que a missão fundamental é apresentar ideias embasadas em conhecimentos específicos da área e validados na prática, mas essa função também envolve possibilitar que as pessoas pensem por si e proponham sugestões adequadas e possivelmente novas.",
     "qrcode": "./assets/images/resume/qrcode.png"
   },
   "workExperience": {
     "label": "Experiência de trabalho",
     "jobs": [
       {
-        "start": "Jun 20",
+        "start": "Set 21",
         "end": "Atualmente",
         "title": "Co-founder",
         "description": "Artesão de Software",
         "companyName": "HeronLabs",
         "achievements": [
           {
-            "title": "HeronLabs é uma empresa independente fundada em parceria com meu sócio Victor Amorim.<br />Nosso objetivo é ser referência para profissionais bem qualificados e prover serviços de qualidade para uma carteira sólida de clientes.<br />Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnologicas do mercado.<br />Também prestamos consultoria e buscamos divulgar conteúdo de forma pública para comunidade de desenvolvimento. Alguns projetos disponiveis:"
+            "title": "HeronLabs é uma empresa independente fundada em parceria com o sócio Victor Amorim.<br>Objetivamos alcançar um patamar de referência como profissionais qualificados que trabalham provendo serviços eficientes para uma carteira sólida de clientes.<br>Atuamos como responsáveis técnicos exercendo o papel de mediadores entre as regras de negócio do nosso cliente e as soluções tecnológicas do mercado.<br>Também prestamos consultoria e buscamos divulgar conteúdo profissional para a comunidade de desenvolvimento. Alguns projetos disponiveis:"
           }
         ]
       },
@@ -30,7 +30,7 @@
         "companyName": "U4crypto",
         "achievements": [
           {
-            "title": "A U4crypto é uma fintech que atua como solução financeira para arranjos entre instituições bancárias e pessoas.  Atualmente a relação entre os arranjos gera um serviço de software que permite encontrar planos financeiros mais acessiveis. Como complemento aos sistemas que relacionam os arranjos, são fornecidas soluções financeiras no formato de serviço bancário. Para compor essa solução, procuro implementar soluções embasadas nas seguintes obras:",
+            "title": "A U4crypto é uma fintech que atua como solução financeira para arranjos entre instituições bancárias e pessoas. Atualmente a relação entre os arranjos gera um serviço de software que permite encontrar planos financeiros mais acessiveis. Como complemento aos sistemas que relacionam os arranjos, são fornecidas soluções financeiras no formato de serviço bancário. Procuro implementar soluções embasadas nas seguintes obras:",
             "descriptions": [
               "Arquitetura Limpa e Código Limpo (Martin C. Robert).",
               "Desenvolvimento Orientado a Testes (Kent Beck) e Refatoração (Martin Fowler).",
