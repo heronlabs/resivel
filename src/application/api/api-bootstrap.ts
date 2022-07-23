@@ -2,7 +2,7 @@ import {Module, ModuleMetadata, ValidationPipe} from '@nestjs/common';
 import {APP_PIPE} from '@nestjs/core';
 
 import {CoreBootstrap} from '../../core/core-bootstrap';
-import {HtmlPdfBootstrap} from '../../infrastructure/html-pdf/html-pdf-bootstrap';
+import {HtmlPdfBootstrap} from '../html-pdf/html-pdf-bootstrap';
 import {HealthCheckController} from './controllers/health-check/health-check-controller';
 import {ResumeController} from './controllers/resume/resume-controller';
 import {JsonPresenter} from './presenters/json/json-presenter';

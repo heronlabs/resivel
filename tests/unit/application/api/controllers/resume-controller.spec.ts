@@ -5,11 +5,11 @@ import {Mock} from 'moq.ts';
 import {ResumeQueryDto} from '../../../../../src/application/api/controllers/resume/dtos/resume-query-dto';
 import {ResumeController} from '../../../../../src/application/api/controllers/resume/resume-controller';
 import {ResumeEntity} from '../../../../../src/core/entities/resume/resume-entity';
-import {ResumeInteractorMock} from '../../../__mocks__/core/services/resume-interactor-mock';
 import {
   PdfPresenterMock,
   pdfPresenterMock,
-} from '../../../__mocks__/infrastructure/html-pdf/application/presenters/pdf-presenter-mock';
+} from '../../../../__mocks__/pdf-presenter-mock';
+import {ResumeInteractorMock} from '../../../../__mocks__/resume-interactor-mock';
 
 describe('Given controller for Resume', () => {
   let controller: ResumeController;

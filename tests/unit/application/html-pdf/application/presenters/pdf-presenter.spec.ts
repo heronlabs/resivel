@@ -2,9 +2,9 @@ import faker from '@faker-js/faker';
 import * as fs from 'fs';
 import {Mock} from 'moq.ts';
 
-import {HandlebarsFactory} from '../../../../../../src/infrastructure/html-pdf/application/factories/handlebars-factory';
-import {PdfPresenter} from '../../../../../../src/infrastructure/html-pdf/application/presenters/pdf-presenter';
-import {ConverterHtmlPdfMock} from '../../../../__mocks__/infrastructure/html-pdf/core/services/converter-html-pdf-mock';
+import {HandlebarsFactory} from '../../../../../../src/application/html-pdf/application/factories/handlebars-factory';
+import {PdfPresenter} from '../../../../../../src/application/html-pdf/application/presenters/pdf-presenter';
+import {ConverterHtmlPdfMock} from '../../../../../__mocks__/converter-html-pdf-mock';
 
 describe('Given pdf presenter', () => {
   let presenter: PdfPresenter;

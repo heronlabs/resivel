@@ -1,5 +1,5 @@
 import {HealthCheckController} from '../../../../../src/application/api/controllers/health-check/health-check-controller';
-import {JsonPresenterMock} from '../../../__mocks__/application/api/presenters/json-presenter-mock';
+import {JsonPresenterMock} from '../../../../__mocks__/json-presenter-mock';
 
 describe('Given controller for health check', () => {
   let controller: HealthCheckController;

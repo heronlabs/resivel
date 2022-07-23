@@ -1,9 +1,9 @@
 import {Mock} from 'moq.ts';
 import {Page} from 'puppeteer';
 
-import {ConverterHtmlPdfService} from '../../../../../../src/infrastructure/html-pdf/core/services/converter-html-pdf-service';
-import {browserMock} from '../../../../__mocks__/infrastructure/html-pdf/infrastructure/puppeteer/browser-mock';
-import {PuppeteerNodeMock} from '../../../../__mocks__/infrastructure/html-pdf/infrastructure/puppeteer/puppeteer-node-mock';
+import {ConverterHtmlPdfService} from '../../../../../../src/application/html-pdf/core/services/converter-html-pdf-service';
+import {browserMock} from '../../../../../__mocks__/browser-mock';
+import {PuppeteerNodeMock} from '../../../../../__mocks__/puppeteer-node-mock';
 
 describe('Given converter html pdf service', () => {
   let service: ConverterHtmlPdfService;

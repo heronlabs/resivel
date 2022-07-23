@@ -11,7 +11,7 @@ import {
 
 import {ResumeInteractor} from '../../../../core/interfaces/resume-interactor';
 import {ResumeInteractorService} from '../../../../core/services/resume-interactor-service';
-import {PdfPresenter} from '../../../../infrastructure/html-pdf/application/presenters/pdf-presenter';
+import {PdfPresenter} from '../../../html-pdf/application/presenters/pdf-presenter';
 import {ResumeQueryDto} from './dtos/resume-query-dto';
 
 @Controller('resume')

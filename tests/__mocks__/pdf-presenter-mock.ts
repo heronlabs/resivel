@@ -1,6 +1,6 @@
 import {Mock} from 'moq.ts';
 
-import {PdfPresenter} from '../../../../../../../src/infrastructure/html-pdf/application/presenters/pdf-presenter';
+import {PdfPresenter} from '../../src/application/html-pdf/application/presenters/pdf-presenter';
 
 export const pdfPresenterMock = {
   envelope: jest.fn(),
