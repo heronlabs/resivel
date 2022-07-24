@@ -59,7 +59,7 @@ describe('Given resume interactor service', () => {
           label: faker.lorem.word(),
           skillsPercentage: [
             {
-              id: `id-${fakeId}`,
+              id: fakeId,
               name: faker.lorem.word(),
               levelPercentage: faker.datatype.number({max: 100}).toString(),
             },
@@ -115,11 +115,11 @@ describe('Given resume interactor service', () => {
           languages: [
             {
               name: faker.lorem.word(),
-              readingPercentageId: `id-${fakeId}`,
+              readingPercentageId: fakeId,
               readingPercentage: faker.lorem.word(),
-              conversationPercentageId: `id-${fakeId}`,
+              conversationPercentageId: fakeId,
               conversationPercentage: faker.lorem.word(),
-              writtingPercentageId: `id-${fakeId}`,
+              writtingPercentageId: fakeId,
               writtingPercentage: faker.lorem.word(),
             },
           ],

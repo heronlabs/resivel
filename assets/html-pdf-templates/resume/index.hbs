@@ -21,7 +21,7 @@
                 {{#each knowledge.skillsPercentage}}
                 <p>{{{this.name}}}</p>
                 <div class="skill_container">
-                  <div class="skill {{this.id}}">
+                  <div class="skill id-{{this.id}}">
                     <span>{{{this.levelPercentage}}}%</span>
                   </div>
                 </div>
@@ -55,19 +55,19 @@
                 <p>{{{this.name}}}</p>
                 <p>{{{../communication.metrics.reading}}}</p>
                 <div class="skill_container">
-                  <div class="skill {{this.readingPercentageId}}">
+                  <div class="skill id-{{this.readingPercentageId}}">
                     <span>{{{this.readingPercentage}}}%</span>
                   </div>
                 </div>
                 <p>{{{../communication.metrics.conversation}}}</p>
                 <div class="skill_container">
-                  <div class="skill {{this.conversationPercentageId}}">
+                  <div class="skill id-{{this.conversationPercentageId}}">
                     <span>{{{this.conversationPercentage}}}%</span>
                   </div>
                 </div>
                 <p>{{{../communication.metrics.writting}}}</p>
                 <div class="skill_container">
-                  <div class="skill {{this.writtingPercentageId}}">
+                  <div class="skill id-{{this.writtingPercentageId}}">
                     <span>{{{this.writtingPercentage}}}%</span>
                   </div>
                 </div>

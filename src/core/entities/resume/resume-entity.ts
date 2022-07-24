@@ -66,7 +66,7 @@ export class ResumeEntity {
     knowledge.skillsPercentage = resumeDto.knowledge.skillsPercentage.map(
       skillPercentageDto => {
         const skillPercentage = new SkillPercentageEntity();
-        skillPercentage.id = `id-${v4()}`;
+        skillPercentage.id = v4();
         skillPercentage.name = skillPercentageDto.name;
         skillPercentage.levelPercentage = skillPercentageDto.levelPercentage;
         return skillPercentage;
@@ -135,11 +135,11 @@ export class ResumeEntity {
       languageDto => {
         const language = new LanguageEntity();
         language.name = languageDto.name;
-        language.readingPercentageId = `id-${v4()}`;
+        language.readingPercentageId = v4();
         language.readingPercentage = languageDto.readingPercentage;
-        language.conversationPercentageId = `id-${v4()}`;
+        language.conversationPercentageId = v4();
         language.conversationPercentage = languageDto.conversationPercentage;
-        language.writtingPercentageId = `id-${v4()}`;
+        language.writtingPercentageId = v4();
         language.writtingPercentage = languageDto.writtingPercentage;
         return language;
       }

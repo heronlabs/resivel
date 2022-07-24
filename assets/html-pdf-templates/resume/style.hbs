@@ -134,19 +134,18 @@ body {
   border-radius: 15px;
 }
 {{#each knowledge.skillsPercentage}}
-.{{this.id}} {
+.id-{{this.id}} {
   width: {{this.levelPercentage}}%;
 }
 {{/each}}
-
 {{#each communication.languages}}
-.{{this.readingPercentageId}} {
+.id-{{this.readingPercentageId}} {
   width: {{this.readingPercentage}}%;
 }
-.{{this.conversationPercentageId}} {
+.id-{{this.conversationPercentageId}} {
   width: {{this.conversationPercentage}}%;
 }
-.{{this.writtingPercentageId}} {
+.id-{{this.writtingPercentageId}} {
   width: {{this.writtingPercentage}}%;
 }
 {{/each}}
